@@ -1,0 +1,103 @@
+/*
+Template Name: Planet
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************services****************/
+.serv_pg1i h1{
+font-size:80px; 
+ }
+.serv_pg1i:hover{
+background:#de1002;
+color:#fff;
+transition: 0.3s; 
+ }
+.serv_pg1i:hover h5{
+color:#fff;
+ }
+.serv_pg1i:hover .button{
+background:#fff;
+color:#de1002;
+ }
+ 
+.spec_m {
+background-color: rgba(0, 0, 0, 0.9);
+padding-top: 50px;
+padding-bottom: 50px;
+}
+#spec {
+background-image: url(../img/3.jpg);
+background-position: center;
+}
+.spec_1i{
+border:1px solid #27292d;
+ }
+.spec_1i:hover{
+background:#de1002;
+color:#fff;
+ }
+.spec_1i:hover span{
+color:#fff;
+ }
+.price_1i .button{
+background:#111; 
+ }
+.price_1i .button:hover{
+background:#fff; 
+ }
+/*********************services_end****************/
+
+
+@media screen and (max-width : 767px){
+.serv_pg1i{
+margin-bottom:15px; 
+ }
+.serv_pg1i h6{
+text-align:center;
+ }
+.spec_1i {
+margin-bottom:15px; 
+ }
+.price_1i  h5{
+text-align:center; 
+ }
+.price_1i  h1{
+text-align:center; 
+ }
+.price_1i {
+margin-bottom:15px; 
+ }
+.work_1l h4{
+ text-align:center;
+ }
+.work_1r h4{
+ text-align:center;
+ }
+.work_1r{
+margin-top:15px;
+ }
+ 
+ 
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+.price_1i {
+text-align:center;
+ }
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+
+ }
+@media (min-width:1201px) and (max-width:1255px) {
+
+ }
+
+

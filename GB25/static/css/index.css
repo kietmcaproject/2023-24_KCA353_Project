@@ -1,0 +1,127 @@
+/*
+Template Name: Planet
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************about****************/
+.about_pgm{
+background-color: rgba(0, 0, 0, 0.8);
+padding-top:50px;
+padding-bottom:50px; 
+ }
+#about_pg {
+  background-image: url(../img/2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#team .carousel-indicators{
+bottom:-50px; 
+ }
+.team_1i1i1 ul li a{
+background:#090a0a; 
+ }
+.team_1i1i1{
+padding:30px 15px 0px 15px;
+background:#000000c2;
+height:60%;
+ }
+ .bio{
+    font-weight: initial;
+ }
+
+ .gape_sr{
+    padding-top:6px ;
+ }
+
+
+/*********************about_end****************/
+
+
+@media screen and (max-width : 767px){
+.about_pg1 p{
+width:100%!important;
+text-align:left; 
+ }
+.about_pg1{
+text-align:center; 
+ }
+.team_1i1  img{
+min-height:460px; 
+ }
+.team_1i1  p{
+font-size:14px; 
+ }
+.team_1i1 {
+margin-bottom:15px;
+text-align:center;
+ }
+.team_1i1 p{
+text-align:left;
+ }
+.heading_main{
+  display: none;   
+ }
+ .phone_bio{
+    display: none;
+ }
+
+ }
+
+
+
+@media (min-width:576px) and (max-width:767px) {
+#team .trend_1l{
+text-align:center; 
+ }
+  .heading_main{
+  display: none;   
+ }
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.team_1i1i img{
+min-height:460px; 
+ }
+#team p{
+font-size:14px;
+ }
+  .phone_bio{
+    display: none;
+ }
+#team ul li a{
+width:35px;
+height:35px;
+font-size:14px;
+ }
+#team ul li a i{
+line-height:35px;
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.lastone{
+    display: none;
+}
+.team_1i1i img{
+min-height:460px; 
+ }
+#team ul li a{
+width:35px;
+height:35px;
+font-size:14px;
+ }
+#team ul li a i{
+line-height:35px;
+ }
+#team p{
+font-size:16px;
+ }
+ }
+@media (min-width:1201px) and (max-width:1255px) {
+
+ }
+
+
