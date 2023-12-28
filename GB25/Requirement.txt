@@ -1,0 +1,10 @@
+Library - Version
+pandas - '2.0.1'
+flask - '2.2.3'
+jinja2 - '3.1.2'
+patsy - '0.5.3'
+json - '2.0.9'
+pickle
+bz2file
+bz2file
+urllib
