@@ -15,11 +15,12 @@
 
 
 
-    <!-- ------------------ Search Bar ------------------------- -->
+  <!-- ------------------ Search Bar ------------------------- -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<!-- ---------------- 1st Search bar -------------------- -->
+  
+  <!-- ---------------- 1st Search bar -------------------- -->
 <script>
     $(document).ready(function() {
         $("#search-box-1").keyup(function() {
@@ -70,7 +71,10 @@
     });
 </script>
 
+
+
 <!-- ---------------- 2nd Search bar -------------------- -->
+
 <script>
     $(document).ready(function() {
         $("#search-box-2").keyup(function() {
@@ -103,22 +107,23 @@
         });
     });
 </script>
-<style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }
-</style>
 
-</head>
+
+<style type="text/css">@font-face { font-family: Roboto; src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); }</style></head>
 
 <body style="padding-top: 0px;">
 
-<!-- ------------------- Headers 1 --------------------- -->
+
+  <!-- ------------------- Headers 1 --------------------- -->
+
 <section id="top">
-<form method="POST" action="/search-movie">
+  <form method="POST" action="/search-movie">
 <div class="container">
  <div class="row top_1">
   <div class="col-md-3">
    <div class="top_1l pt-1">
     <h3 class="mb-0"><a class="text-white" href="/"><i class="fa fa-video-camera col_red me-1"></i> Pranik Movies</a></h3>
-
+    
    </div>
   </div>
   <div class="col-md-5">
@@ -166,10 +171,10 @@
       <div class="navbar-collapse collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/about">About</a>
+            <a class="nav-link" href="/about">About</a>
           </li>
 
           <li class="nav-item">
@@ -193,118 +198,69 @@
   });
 </script>
 
-<!--------------- About Me --------------------->
-<section id="about_pg" style="padding-top:50px">
-    <div class="about_pgm">
-      <div class="row container about_pg1">
-        <div class="col-md-6">
-          <h2><span class="col_red heading_main desktop_heading about_me">About Me</span><br>  </h2>
-          <p class="mt-3 bio">Hi there, my name is <strong>Nikhil Kumar Yadav</strong>, and I have a keen interest in programming, machine learning, and data science. I am always eager to learn about new technologies and explore their potential.</p>
-          <p class="bio">My passion for technology has driven me to pursue a Master's degree in Artificial Intelligence.</p>
-          <p class="bio">In addition to my personal interests, I am also committed to contributing to the field through projects like my movie recommendation system.</p>
-          <p class="bio"> I would love to hear your feedback on this project and welcome any constructive criticism to help me improve. Thank you for taking the time to check out my work!</p>
-        </div>
-<div class="col-md-6 text-center" style="padding-top:25px;">
-    <img src="../static/img/nik.jpg" alt="Your Photo" class="img-fluid" style="border-radius: 8%;">
-    <h4 class="heading_main desktop_heading" style="padding-top: 10px;color: #A91B0D; ">
-        Nikhil Kumar Yadav
-        <hr class="fw-bold" style="margin-top: 5px; margin-bottom: 10px; border: 1px solid red;width:20%; margin-left:40%;margin-right:40% ;">
-    </h4>
-</div>
 
+
+
+
+
+<!-- Thriller Movies -->
+
+<section id="" class="pt-4 pb-5 bg_grey">
+  <div class="container">
+    <div class="row trend_1">
+      <div class="col-md-12">
+        <div class="trend_1l">
+          <h4 class="mb-0"><i class="fa fa-youtube-play align-middle col_red me-1"></i> Drama <span class="col_red">Movies</span></h4>
+        </div>
       </div>
     </div>
-</section>
 
+    <div class="popular_2 row mt-4">
+      <div class="tab-content">
+        <div class="tab-pane active" id="home">
+          <div class="popular_2i row mt-4">
+            {% if movie_details %}
+            {% for movie in movie_details %}
 
-
-<!-- --------------------- Skills ------------------------- -->
-<section id="price" class="pt-4 pb-4">
- <div class="container-xl">
-
-   <div class="row work_1 mt-5">
-    <div class="col-md-6">
-   <div class="work_1l" style="padding-top:25px">
-    <h4 class="col_red mb-4">My Expertise</h4>
-    <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-   <h2 class="accordion-header" id="headingOne">
-     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-       Smart Product Recommendations
-     </button>
-   </h2>
-   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
-     <div class="accordion-body">
-      Let our Smart Product Recommendations service suggest the perfect product for you. Discover products tailored to your preferences with our AI-powered recommendation engine.
-     </div>
-   </div>
-  </div>
-
-  <div class="accordion-item">
-   <h2 class="accordion-header" id="headingTwo">
-     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-      InsightIQ Analytics
-     </button>
-   </h2>
-   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-     <div class="accordion-body">
-        Gain valuable insights into your business with InsightIQ Analytics.<br>
-        Let InsightIQ Analytics help you make data-driven decisions.<br>
-        Unlock the power of your data with InsightIQ Analytics.<br>
-     </div>
-   </div>
- </div>
-
-  <div class="accordion-item">
-   <h2 class="accordion-header" id="headingThree">
-     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-      Data Science Solutions
-     </button>
-   </h2>
-   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-     <div class="accordion-body">
-       Our data science service provides advanced analytics and insights to help businesses make informed decisions. We use cutting-edge tools and techniques to analyze complex data sets, identify patterns, and make predictions.
-     </div>
-   </div>
- </div>
-</div>
-   </div>
-  </div>
-  <div class="col-md-6">
-   <div class="work_1r">
-      <h4 class="col_red mb-4" style="padding-top:25px">My Skills</h4>
-    <div class="play2rir">
-     <h6 class="fw-normal">Programming<span class="pull-right">85%</span></h6>
-         <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-          <h6 class="fw-normal mt-4">Machine Learning <span class="pull-right">80%</span></h6>
-         <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-          <h6 class="fw-normal mt-4">Data Science <span class="pull-right">90%</span></h6>
-         <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-          <h6 class="fw-normal mt-4">Development <span class="pull-right">83%</span></h6>
-         <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 83%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
- <h6 class="fw-normal mt-4">My SQL <span class="pull-right">79%</span></h6>
-         <div class="progress">
-  <div class="progress-bar" role="progressbar" style="width: 79%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-</div>
-
+            <!-- ---------------------- Movie-1 -------------------------- -->
+            <div class="col-md-6 mb-4">
+              <div class="popular_2i1 row">
+                <div class="col-md-4 col-4">
+                  <div class="popular_2i1lm  clearfix">
+                    <div class="popular_2i1lm1 clearfix">
+                      <div class="grid">
+                        <figure class="effect-jazz mb-0">
+                          {% if movie.poster_r %}
+                          <a href="/search?query={{ movie.title_r }}&amp;id={{ movie.movie_id_r }}"><img src="{{ movie.poster_r }}" class="w-100" alt="Movie Poster"></a>
+                          {% endif %}
+                        </figure>
+                      </div>
+                    </div>
+                    <div class="popular_2i1lm2 position-absolute top-0 w-100 text-center clearfix">
+                      <a href="/search?query={{ movie.title_r }}&amp;id={{ movie.movie_id_r }}"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 col-8 text-md-start">
+                  <div class="popular_2i1r">
+                    <h5><a class="col_red" href="/search?query={{ movie.title_r }}&amp;id={{ movie.movie_id_r }}">{{ movie.title_r }}</a></h5>
+                    <h6>{{ movie.genres_r }}</h6>
+                    <h6>Imdb {{ movie.rating_r }}  <span class="ms-2"><i class="fa fa-star col_red me-1"></i></span></h6>
+                    <h6>Year : {{ movie.year_r }}</h6>
+                    <h6>Runtime: {{ movie.runtime_r }}</h6><br>
+                    <h6 class="mb-0"><a class="button" href="/search?query={{ movie.title_r }}&amp;id={{ movie.movie_id_r }}" data-movie-id="movie.movie_id_r"> More Info - Trailer</a></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
-   </div>
   </div>
-   </div>
- </div>
 </section>
-
-
-
-
 
 
 <style>
