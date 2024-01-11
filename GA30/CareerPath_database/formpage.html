@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .d-none {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav>
+        <div class="container main-nav flex">
+            <a href="index.html" class="CareerPath-logo">
+                <img src="./image/Logo.png" alt="Career Path">
+            </a>
+            
+            <div class="nav-links" id="nav-links">
+                <ul class="flex">
+                    <li><a href="index.html" class="hover-link">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="hover-link">Colleges</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://www.nirfindia.org/2023/InnovationRanking.html#top" target="_blank">IIT</a></li>
+                          <li><a href="#">NIT</a></li>
+                          <li><a href="#">IIIT</a></li>
+                          <li><a href="https://www.kiet.edu" target="_blank">KIET Group of Institution Ghagiabad</a></li>
+                          
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="hover-link">Exam</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://jeemain.nta.ac.in/" target="_blank">JEE Mains</a></li>
+                          <li><a href="https://gate2024.iisc.ac.in/" target="_blank">Gate</a></li>
+                          <li><a href="https://cuet.nta.nic.in/" target="_blank">CUET</a></li>
+                          
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="hover-link">Course</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">B Tech</a></li>
+                          <li><a href="#">M Tech</a></li>
+                          <li><a href="#">BCA</a></li>
+                          <li><a href="#">MCA</a></li>
+                          
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="hover-link">Careers</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Software Engineer</a></li>
+                          <li><a href="#">Doctor</a></li>
+                          <li><a href="#">Civil Services</a></li>
+                          
+                        </ul>
+                      </li>
+                   
+                    <li><a href="https://www.kiet.edu" target="_blank" class="primary-button">KIET</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <section class="Detail-section">
+        <div class="container flex Detail-container">
+            <div class="Detail-img">
+                <img src="./image/38.png" alt="">
+            </div>
+            <div class="Detail-desc flex">
+                <h2>Fill up the Form</h2>
+                <form action="result.html" class="form">
+                    <div class="input-box">
+                        <label><b>Full Name</b></label>
+                        <input type="text" id="userName" name="Name" placeholder="Enter full Name" required>
+                    </div>
+                    <div class="input-box">
+                        <label><b>Email</b></label>
+                        <input type="text" id="userEmail" name="Email" placeholder="Enter Email" required>
+                    </div>
+
+                    <div class="input-box education">
+                        <label><b>Class</b></label>
+                        <div class="select-box">
+                            <select id="high" name="class" onchange="enable(this)">
+                                <option value="Select Class">Select Class</option>
+                                <option value="High School">High School</option>
+                                <option value="Intermediate">Intermediate</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                    <div id="Sub_ject" class="d-none">
+                        <div class="input-box education">
+                            <label><b>Subject</b>*(Only for Intermediate)</label>
+                            <div class="select-box">
+                                <select id="sub__ject" name="subject" >
+                                    <option value="Select Subject">Select Subject</option>
+                                    <option value="Mathematics">Mathematics</option>
+                                    <option value="Biology">Biology</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Grad_uation" class="d-none">
+                        <div class="input-box education">
+                            <label><b>Graduation</b></label>
+                            <div class="select-box">
+                                <select id="Grad__uation" name="graduation" >
+                                    <option value="Select Graduation">Select Graduation</option>
+                                    <option value="Not Applicable">Not Applicable</option>
+                                    <option value="BCA">BCA</option>
+                                    <option value="Bsc">Bsc</option>
+                                    <option value="BA">BA</option>
+                                    <option value="B Pharma">B Pharma</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-box education">
+                        <label><b>Intrest</b></label>
+                        <div class="select-box">
+                            <select id="intr_est" name="intrest">
+                                <option value="Select your intrest">Select your intrest</option>
+                                <option value="IT Sector">IT Sector</option>
+                                <option value="Medical">Medical</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" name="Sub" value="Submit" onclick="passvalues();">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container flex footer-container">
+            <a class="hover-link" href="Portfolio.html" target="_blank">About Me</a>
+            <a class="hover-link" href="https://www.linkedin.com/in/shivam-chaturvedi-208a4b192" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="hover-link" href="https://twitter.com/Shivam1472?t=fcLIW7HOxVLd429f8BYpqQ&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+
+    </script>
+
+    <script type="text/javascript">
+        function enable(answer) {
+            console.log(answer.value);
+            if (answer.value == 'Intermediate') {
+                document.getElementById('Sub_ject').classList.remove('d-none');
+                document.getElementById('Grad_uation').classList.remove('d-none');
+            } else {
+                document.getElementById('Sub_ject').classList.add('d-none');
+                document.getElementById('Grad_uation').classList.add('d-none');
+            }
+        };
+    </script>
+
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

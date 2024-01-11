@@ -1,0 +1,503 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* CareerPath Logo */
+.CareerPath-logo {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.CareerPath-logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* utility classes */
+
+.small-bold-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.hover-link {
+    color: var(--primary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.hover-link:hover {
+    color: var(--accent-color);
+}
+
+.primary-button {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.2s ease-out;
+    text-align: center;
+}
+
+.primary-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+.secondary-button {
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+
+.secondary-button:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+
+
+/* nav bar */
+
+.main-nav {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.CareerPath-logo img {
+    width: 200px;
+}
+
+.nav-links {
+    flex-basis: 730px;
+}
+
+.nav-links ul {
+    justify-content: end;
+    gap: 40px;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+/* header section */
+
+header {
+    padding: 50px var(--padding-inline-section) 0;
+}
+
+.header-section {
+    justify-content: center;
+    gap: 50px;
+}
+
+.header-left {
+    max-width: 40vw;
+}
+
+.header-left h1 {
+    margin-top: 20px;
+}
+
+.get-started-btn {
+    margin-top: 20px;
+}
+
+.header-right img {
+    width: 100%;
+}
+
+/* University section */
+
+.University-header {
+    text-align: center;
+    margin-block: 30px;
+    color: var(--primary-text-color);
+}
+
+.logos {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+
+
+/* Detail section */
+
+.Detail-section {
+    padding: 30px var(--padding-inline-section) 0;
+}
+
+.Detail-container {
+    gap: 30px;
+}
+
+#second-Detail {
+    flex-direction: row-reverse;
+}
+
+.Detail-img img {
+    width: 100%;
+}
+
+.Detail-desc {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+/* fill-now section */
+
+.fill-now-section-container {
+    flex-direction: column;
+    gap: 15px;
+    color: #183b54;
+    text-align: center;
+}
+
+.fill-now-section {
+    padding: 100px var(--padding-inline-section) 80px;
+    background-color: rgb(255, 255, 255);
+}
+
+.fill-now-section-container p {
+    color: #183b54;
+    margin-top: 20px;
+}
+
+
+
+
+/* footer */
+
+.footer {
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+}
+
+.footer-container {
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* form page */
+/* form section */
+
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: var(--accent-color);
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #707070;
+}
+.education :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--accent-color);
+}
+.form button:hover {
+  background: var(--accent-color-dark);
+}
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+
+/* Detail section */
+
+.Detail-section {
+  padding: 30px var(--padding-inline-section) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Detail-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.Detail-img {
+  flex: 1; 
+  margin-right: 30px;
+}
+
+.Detail-img img {
+  width: 100%;
+}
+
+.Detail-desc {
+  flex: 1; 
+}
+
+.Detail-desc form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+
+/* result page */
+
+
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.results-table th, .results-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.results-table th {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#courseData {
+  white-space: pre-line;
+  }
+#entranceExamData {
+    white-space: pre-line;
+    }
+#collegeData {
+      white-space: pre-line;
+      }
+
+
+
+
+
+
+/* print */
+
+.print-button {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+.print-button:hover {
+  background-color: var(--accent-color-dark);
+}
+
+/* top scroll */
+
+#myBtn {
+  position: fixed; 
+  display: none; 
+  bottom: 20px;
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: var(--accent-color); 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+  background-color: var(--accent-color-dark); 
+}
+
+
+/* drop down menu*/
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 5;
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  z-index: 5; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; 
+  z-index: 5;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  z-index: 5;
+}
+
+.dropdown-menu a {
+  color: #333; 
+  text-decoration: none;
+  display: block;
+  z-index: 5;
+}
+
+
+.dropdown-menu a:hover {
+  background-color: var(--accent-color); 
+  color: white;
+  z-index: 5;
+}

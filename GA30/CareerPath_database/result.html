@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Results</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    
+
+</head>
+<body>
+
+ <!-- nav bar -->
+ <nav>
+    <div class="container main-nav flex">
+        <a href="index.html" class="CareerPath-logo">
+            <img src="./image/Logo.png" alt="Career Path">
+        </a>
+        
+        <div class="nav-links" id="nav-links">
+            <ul class="flex">
+                <li><a href="index.html" class="hover-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="hover-link">Colleges</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="https://www.nirfindia.org/2023/InnovationRanking.html#top" target="_blank">IIT</a></li>
+                      <li><a href="#">NIT</a></li>
+                      <li><a href="#">IIIT</a></li>
+                      <li><a href="https://www.kiet.edu" target="_blank">KIET Group of Institution Ghagiabad</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="hover-link">Exam</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="https://jeemain.nta.ac.in/" target="_blank">JEE Mains</a></li>
+                      <li><a href="https://gate2024.iisc.ac.in/" target="_blank">Gate</a></li>
+                      <li><a href="https://cuet.nta.nic.in/" target="_blank">CUET</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="hover-link">Course</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">B Tech</a></li>
+                      <li><a href="#">M Tech</a></li>
+                      <li><a href="#">BCA</a></li>
+                      <li><a href="#">MCA</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="hover-link">Careers</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Software Engineer</a></li>
+                      <li><a href="#">Doctor</a></li>
+                      <li><a href="#">Civil Services</a></li>
+                      
+                    </ul>
+                  </li>
+               
+                <li><a href="https://www.kiet.edu" target="_blank" class="primary-button">KIET</a></li>
+            </ul>
+        </div>
+        <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </div>
+</nav>
+<br><br>
+    <div class="container">
+        <h2>Hii <span id="full" name="full"></span></h2>
+        <h4><span id="mail" name="mail"></span></h4>
+        <p>Here is the result acording to your intrest and provided Information.</p>
+        <table class="results-table">
+            <tr>
+                <th>Some Important Point</th>
+                <th>Information</th>
+            </tr>
+            <tr>
+                <td><b>Courses</b></td>
+                <td id="courseData">Course data</td>
+            </tr>
+            <tr>
+                <td><b>Entrance Exams</b></td>
+                <td id="entranceExamData">Entrance Exam Data</td>
+            </tr>
+            <tr>
+                <td><b>Top Colleges</b></td>
+                <td id="collegeData">Top College Data</td>
+            </tr>
+        </table>
+    </div>
+<br>
+<br>
+<div class="container">
+    <button class="print-button"  onclick="window.print();">Print</button>
+</div>
+
+
+<br>
+<br>
+<!-- footer section -->
+
+<div class="footer">
+    <div class="container flex footer-container">
+        <a class="hover-link" href="Portfolio.html" target="_blank">About Me</a>
+        <a class="hover-link" href="https://www.linkedin.com/in/shivam-chaturvedi-208a4b192" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="hover-link" href="https://twitter.com/Shivam1472?t=fcLIW7HOxVLd429f8BYpqQ&s=09" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+    </div>
+</div>
+
+<script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script> 
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the text content of the HTML elements with IDs 'full' and 'mail'
+  const fullValue = document.getElementById('full').innerText;
+  const mailValue = document.getElementById('mail').innerText;
+
+  // Create a new FormData object
+  const formData = new FormData();
+  formData.append('full', fullValue);
+  formData.append('mail', mailValue);
+
+  // Send the form data to submit.php using fetch API
+  fetch('submit.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => {
+      // Handle the response as needed
+      console.log('Data sent to submit.php successfully');
+  })
+  .catch(error => {
+      // Handle errors here
+      console.error('Error sending data:', error);
+  });
+});
+
+</script>
+
+<script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    })
+
+</script>
+
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
