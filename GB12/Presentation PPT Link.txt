@@ -1,8 +1,0 @@
-Name: Anmol Goyal
-Roll No:2200290140033
-Project Name: Expense Sharing App
-Technology:  HTML,CSS,Javascript,MYSQL,PHP
-Project Outcome: Patent
-
-Presentation Link:
-https://gamma.app/docs/Revolutionizing-Personal-Finance-Management-The-Expense-Sharing-A-zp1z4rfxxydkwvt
