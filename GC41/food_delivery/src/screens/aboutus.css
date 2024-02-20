@@ -1,0 +1,51 @@
+/* AboutUs.css */
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #e9e3e3;
+  }
+  h2{
+    color:white;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #eaa0a0;
+  }
+.maindiv{
+    display: flex;
+    color:black;
+  }
+  .div1{
+  color:black;
+  width:45vw;
+  height: 92vh;
+  background-color: black;
+}
+.div1 img{
+  object-fit:full;
+  /* background-size: cover; */
+  width:100%;
+  height:100%;
+}
+.div2{
+  width: 60vw;
+  height: 92vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: repeating-linear-gradient(45deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(17, 17, 17),rgb(66, 66, 66));
+}
+.div2 p{
+  color:white;
+  text-align: justify;
+}
+  
+  /* Add more styles as needed */
+  

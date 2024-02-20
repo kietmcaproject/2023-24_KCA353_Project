@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo&display=swap');
+.mynav{
+    /* background-image: radial-gradient(circle at 29% 55%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 4%,transparent 4%, transparent 44%,transparent 44%, transparent 100%),radial-gradient(circle at 85% 89%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 52%,transparent 52%, transparent 100%),radial-gradient(circle at 6% 90%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 53%,transparent 53%, transparent 64%,transparent 64%, transparent 100%),radial-gradient(circle at 35% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 6%,transparent 6%, transparent 98%,transparent 98%, transparent 100%),radial-gradient(circle at 56% 75%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 16%,transparent 16%, transparent 23%,transparent 23%, transparent 100%),radial-gradient(circle at 42% 0%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 3%,transparent 3%, transparent 26%,transparent 26%, transparent 100%),radial-gradient(circle at 29% 28%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 51%,transparent 51%, transparent 75%,transparent 75%, transparent 100%),radial-gradient(circle at 77% 21%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 35%,transparent 35%, transparent 55%,transparent 55%, transparent 100%),radial-gradient(circle at 65% 91%, hsla(329,0%,99%,0.05) 0%, hsla(329,0%,99%,0.05) 46%,transparent 46%, transparent 76%,transparent 76%, transparent 100%),linear-gradient(45deg, rgb(83, 91, 235),rgb(76, 11, 174)); */
+    background-image: radial-gradient(circle at center center, rgba(217, 217, 217,0.05) 0%, rgba(217, 217, 217,0.05) 15%,rgba(197, 197, 197,0.05) 15%, rgba(197, 197, 197,0.05) 34%,rgba(178, 178, 178,0.05) 34%, rgba(178, 178, 178,0.05) 51%,rgba(237, 237, 237,0.05) 51%, rgba(237, 237, 237,0.05) 75%,rgba(138, 138, 138,0.05) 75%, rgba(138, 138, 138,0.05) 89%,rgba(158, 158, 158,0.05) 89%, rgba(158, 158, 158,0.05) 100%),radial-gradient(circle at center center, rgb(255,255,255) 0%, rgb(255,255,255) 6%,rgb(255,255,255) 6%, rgb(255,255,255) 12%,rgb(255,255,255) 12%, rgb(255,255,255) 31%,rgb(255,255,255) 31%, rgb(255,255,255) 92%,rgb(255,255,255) 92%, rgb(255,255,255) 97%,rgb(255,255,255) 97%, rgb(255,255,255) 100%); background-size: 42px 42px;
+}
+.mynav ul{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    /* gap: 100px; */
+    /* margin-left: 10rem; */
+    width: 80%;
+    /* background-color: red; */
+    font-family: 'Aleo', serif;
+    font-weight:500;
+    /* background-color: aquamarine; */
+}
+.mynav ul li a{
+   color:black;
+   
+}
+.mynav {
+    background-color: green;
+}
+.mynav ul li span:hover{
+    color:black;
+/* font-size: 72px; */
+/* color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,209,35,1) 0%, rgba(0,212,255,1) 100%); */
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,209,35,0.5613683705904237) 0%, rgba(220,255,0,1) 43%, rgba(74,215,20,1) 64%); 
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* background-color: white; */
+}
+.mylogo img{
+    width: 60px;
+    /* height: 80px; */
+    font-size: 3rem;
+    /* height: auto; */
+}
+
+.btn-logout1:hover{
+    color:black;
+    background-color: rgb(85, 134, 85);
+}   
+.user-email{
+    font-family: cursive;
+}

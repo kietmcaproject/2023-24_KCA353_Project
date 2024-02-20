@@ -1,0 +1,74 @@
+/* ContactUs.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+.contact-us-container {
+    max-width: 800px;
+    margin: 0 auto ;
+    padding: 20px;
+    text-align: center;
+    background-image: radial-gradient(circle at center center, rgb(71, 71, 71),rgb(8, 8, 8));
+  }
+  
+  h1 {
+    color: #d88b8b;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
+  
+  p {
+    line-height: 1.5;
+    color: #ffffff;
+  }
+  
+  .contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lbl{
+    margin-bottom: 8px;
+    color:#4caf50;
+    /* font-weight: bold; */
+  }
+  
+  .inp,
+  .textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .sbtn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .sbtn:hover {
+    background-color: white;
+    color: #45a049;
+  }
+  
+  .social-media {
+    margin-top: 30px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  .social-icons div{
+    margin-left: 1rem;
+  }
+  /* Add more styles as needed */
+  
