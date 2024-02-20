@@ -1,0 +1,83 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+ }
+ body{
+   background-image: url(registerimage.jfif);
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+ 
+ nav{
+    width: 96%;
+    margin: 28px;
+    display: flex;
+    justify-content: space-between;
+    
+    }
+    nav ul li{
+        
+        display: inline-block;
+        margin: 0 10px;
+        
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: black;
+        font-size: medium;
+        font-weight: bold;
+        padding: 15px;
+       
+        border-radius: 12px;
+        cursor: pointer;
+        
+    }
+    .logo{
+        width: 200px;
+    }
+    a:hover{
+   
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+    } 
+    h1{
+        font-size: 30px;
+    }
+    th{
+        border: 0.5px solid black;
+        color: blue;
+        padding: 12px;
+        
+    }
+    td{
+        border: 1px solid black;
+        color: black;
+        padding: 12px;
+    }
+    table{
+       padding-left: 17%;
+    }
+    button{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    
+    padding: 10px;
+    
+    border-radius: 8px;
+        
+        
+    }
+    
+    button:hover{
+        color: rgb(34, 29, 29);
+        background-color: rgb(100, 177, 215);
+    }
+    .btn{
+        text-align: center;
+        
+        
+    
+    }
+    
