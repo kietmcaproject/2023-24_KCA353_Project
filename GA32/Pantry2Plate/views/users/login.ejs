@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate') %>
+
+    <div class="login_bg">
+        <img src="/images/2.jpg" alt="">
+    </div>
+    <div class="col-6 offset-3">
+        <form action="/login" method="POST" class="validated-form login_from" novalidate>
+
+            <div class="mainContainer_login">
+                <div class="login_headings">
+                    <h3>Login</h3>
+                    <p class="text">Sign in with your username and password</p>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="username">Username</label>
+                    <input class="form-control" type="text" id="username" name="username" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password">Password</label>
+                    <input class="form-control" type="password" id="password" name="password" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <button class="btn btn-success login_btn">Login</button>
+                <p class="logins_register">Not a member? <a class="linkhover" href="/register">Register here!</a></p>
+            </div>
+        </form>
+    </div>

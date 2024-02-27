@@ -1,0 +1,109 @@
+<% layout('layouts/boilerplate')%>
+
+    <div class="row">
+        <h1 class="text-center">Edit Recipe</h1>
+        <div class="col-6 offset-3">
+            <form action="/recipes/<%=recipe._id%>?_method=PUT" method="POST" novalidate class="validated-form">
+
+                <!-- NAME -->
+                <div class="mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" type="text" id="name" name="recipe[name]" value="<%=recipe.name%>"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!-- TIME -->
+                <div class="mb-3">
+                    <label class="form-label" for="time">Time</label>
+                    <input class="form-control" type="text" id="time" name="recipe[time]" value="<%=recipe.time%>"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!-- IMAGE URL -->
+                <div class="mb-3">
+                    <label class="form-label" for="img">Image URL</label>
+                    <input class="form-control" type="text" id="img" name="recipe[img]" value="<%=recipe.img%>"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!-- METHOD -->
+                <div class="mb-3">
+                    <label class="form-label" for="method">Method</label>
+                    <input class="form-control" type="text" id="method" name="recipe[method]" value="<%=recipe.method%>"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!-- INGREDIENT -->
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient">Ingredient</label>
+                    <input class="form-control" type="text" id="ingredient" name="recipe[ingredient]" value="<%=recipe.ingredient%>"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <!-- --------------------------------------------------------------------------- -->
+                <!-- <div class="mb-3">
+                    <label class="form-label" for="ingredient1">Ingredient1</label>
+                    <input class="form-control" type="text" id="ingredient1" name="recipe[ingredient1]" value="<%=recipe.ingredient1%>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient2">Ingredient2</label>
+                    <input class="form-control" type="text" id="ingredient2" name="recipe[ingredient2]" value="<%=recipe.ingredient2%>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient3">Ingredient3</label>
+                    <input class="form-control" type="text" id="ingredient3" name="recipe[ingredient3]" value="<%=recipe.ingredient3%>" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient4">Ingredient4</label>
+                    <input class="form-control" type="text" id="ingredient4" name="recipe[ingredient4]" value="<%=recipe.ingredient4%>" >
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient5">Ingredient5</label>
+                    <input class="form-control" type="text" id="ingredient5" name="recipe[ingredient5]" value="<%=recipe.ingredient5%>" >
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div> -->
+
+                <!-- DESCRIPTION -->
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="recipe[description]" required>
+                        <%=recipe.description%>
+                    </textarea>
+                </div>
+
+                <!-- BUTTON -->
+                <div class="mb-3">
+                    <button class="btn btn-info">Update Recipe</button>
+                </div>
+            </form>
+            <a href="/recipes/<%= recipe._id%>" class="text-decoration-none">Back to Recipe</a>
+        </div>
+    </div>

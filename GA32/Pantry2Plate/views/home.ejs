@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantry2Plate</title>
+
+  <!-- ICON -->
+  <link rel="icon" href="/images/logo.png">
+
+  <!-- FONTAWESOME -->
+  <script src="https://kit.fontawesome.com/f1d0426038.js" crossorigin="anonymous"></script>
+
+  <!-- BOOTSTRAP CSS LINK -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- HOME CSS -->
+  <link href="/stylesheets/home.css" rel="stylesheet">
+
+</head>
+
+<body class="d-flex flex-column vh-100">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand nav-link" href="/"><img class="logo" src="/images/logo.png" alt="P2P">Pantry2Plate</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+          <a class="nav-link" href="/recipes">Recipes</a>
+          <a class="nav-link" href="/recipes/new">New</a>
+          <a class="nav-link" href="http://localhost:3000">Search</a>
+          <a class="nav-link" href="/aboutUs">About Us</a>
+        </div>
+        <div class="navbar-nav ms-auto">
+          <% if(!currentUser) {%>
+            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/register">Register</a>
+            <% } else { %>
+              <a class="nav-link" href="/logout">Logout</a>
+              <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- IMAGE SLIDING -->
+  <section id="first">
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="/images/1.jpg" class="ingredientImg d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/images/2.jpg" class="ingredientImg d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/images/3.jpeg" class="ingredientImg d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/images/4.jpg" class="ingredientImg d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/images/5.webp" class="ingredientImg d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/images/6.png" class="ingredientImg d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/images/7.webp" class="ingredientImg d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="/images/8.webp" class="ingredientImg d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </section>
+
+
+  <!-- CHOOSING OPTIONS USING JS -->
+  <!-- <section id="second">
+
+    <div class="container">
+      <div class="options">
+        <label>
+          <input type="checkbox" class="checkbox" value="Ingredient 1"> Ingredient 1
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox" value="Ingredient 2"> Ingredient 2
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox" value="Ingredient 3"> Ingredient 3
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox" value="Ingredient 4"> Ingredient 4
+        </label>
+        <label>
+          <input type="checkbox" class="checkbox" value="Ingredient 5"> Ingredient 5
+        </label> -->
+
+        <!-- Add more options as needed -->
+      <!-- </div>
+      <div class="selected-options">
+        <h3>Selected Ingredients:</h3>
+        <ul id="selected-list"></ul>
+      </div>
+    </div> -->
+
+  <!-- </section> -->
+
+
+  <!-- FOOTER -->
+  <footer class="footer footer-expand-lg bg-body-tertiary py-3 mt-auto text-center" data-bs-theme="dark">
+    <div class="container">
+      <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i
+          class="last fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/" target="_blank"><i class="last fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/login" target="_blank"><i class="last fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/signup/cold-join?session_redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Fprofile%2Fview&trk=login_reg_redirect"
+        target="_blank"><i class="last fab fa-linkedin-in"></i></a>
+      <br>
+      <span class="text-muted">&copy; Copyright 2023 Pantry2Plate</span>
+    </div>
+  </footer>
+
+
+  <!-- BOOTSTRAP SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+
+  <!-- JAVASCRIPT FILE -->
+  <script src="/javascripts/home.js"></script>
+</body>
+
+</html>

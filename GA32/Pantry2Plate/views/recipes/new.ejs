@@ -1,0 +1,102 @@
+<% layout('layouts/boilerplate')%>
+
+    <div class="row">
+        <h1 class="text-center">New Recipe</h1>
+        <div class="col-6 offset-3">
+            <form action="/recipes" method="POST" class="validated-form" novalidate>
+
+                <!-- NAME -->
+                <div class="mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" type="text" id="name" name="recipe[name]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!-- TIME -->
+                <div class="mb-3">
+                    <label class="form-label" for="time">Time</label>
+                    <input class="form-control" type="text" id="time" name="recipe[time]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!-- IMAGE URL -->
+                <div class="mb-3">
+                    <label class="form-label" for="img">Image URL</label>
+                    <input class="form-control" type="text" id="img" name="recipe[img]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!-- METHOD -->
+                <div class="mb-3">
+                    <label class="form-label" for="method">Method</label>
+                    <input class="form-control" type="text" id="method" name="recipe[method]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <!-- INGREDIENT -->
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient">Ingredient</label>
+                    <input class="form-control" type="text" id="ingredient" name="recipe[ingredient]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <!-- ---------------------------------------------------------------------------- -->
+                <!-- <div class="mb-3">
+                    <label class="form-label" for="ingredient1">Ingredient1</label>
+                    <input class="form-control" type="text" id="ingredient1" name="recipe[ingredient1]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient2">Ingredient2</label>
+                    <input class="form-control" type="text" id="ingredient2" name="recipe[ingredient2]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient3">Ingredient3</label>
+                    <input class="form-control" type="text" id="ingredient3" name="recipe[ingredient3]" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient4">Ingredient4</label>
+                    <input class="form-control" type="text" id="ingredient4" name="recipe[ingredient4]" >
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="ingredient5">Ingredient5</label>
+                    <input class="form-control" type="text" id="ingredient5" name="recipe[ingredient5]" >
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div> -->
+                <!-- DESCRIPTION -->
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="recipe[description]" required>
+                    </textarea>
+                </div>
+
+                <!-- BUTTON -->
+                <div class="mb-3">
+                    <button class="btn btn-success">Add Recipe</button>
+                </div>
+            </form>
+        </div>
+        <a href="/recipes" class="text-decoration-none">All Recipes</a>
+    </div>

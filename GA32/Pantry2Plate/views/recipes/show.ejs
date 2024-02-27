@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate')%>
+
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card mb-3" style="width: 30rem;">
+                <img src="<%= recipe.img %>" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= recipe.name %>
+                    </h5>
+                    <h6 class="card-title">
+                        <%= recipe.time %>
+                    </h6>
+                    <p class="card-text">
+                        <%= recipe.description %>
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item text-muted">
+                        <%= recipe.method %>
+                    </li>
+                    <li class="list-group-item">
+                        <%= recipe.ingredient %>
+                    </li>
+                    <!-- <li class="list-group-item">
+                        <%= recipe.ingredient1 %>
+                    </li>
+                    <li class="list-group-item">
+                        <%= recipe.ingredient2 %>
+                    </li>
+                    <li class="list-group-item">
+                        <%= recipe.ingredient3 %>
+                    </li>
+                    <li class="list-group-item">
+                        <%= recipe.ingredient4 %>
+                    </li>
+                    <li class="list-group-item">
+                        <%= recipe.ingredient5 %>
+                    </li> -->
+                </ul>
+                <div class="card-body">
+                    <a class="card-link btn btn-info" href="/recipes/<%=recipe._id%>/edit">Edit</a>
+                    <form class="d-inline" action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+                <div class="card-footer text-muted">
+                    2 days ago
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="/recipes" class="text-decoration-none">All Recipes</a>
+    </footer>

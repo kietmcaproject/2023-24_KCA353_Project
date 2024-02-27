@@ -1,0 +1,33 @@
+<% layout('layouts/boilerplate')%>
+    <div class="index">
+        <div class="index_bg">
+            <!-- <img src="/images/8.webp" alt=""> -->
+        </div>
+        <ul>
+            <% for(let recipe of recipes){%>
+                <div class="card" mb-3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid" src="<%= recipe.img%>" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h1 class="card-title">
+                                    <%=recipe.name%>
+                                </h1>
+                                <p class="card-text">
+                                    <%=recipe.time%>
+                                </p>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <%=recipe.description%>
+                                    </small>
+                                </p>
+                                <a class="btn btn-primary" href="/recipes/<%=recipe._id%>">View <%=recipe.name%></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }%>
+        </ul>
+    </div>

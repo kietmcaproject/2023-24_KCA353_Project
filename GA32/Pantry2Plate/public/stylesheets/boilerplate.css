@@ -1,0 +1,136 @@
+/* FONT FAMILY */
+* {
+    font-family: 'EB Garamond', serif;
+    font-family: 'Lora', serif;
+    font-family: 'Playfair Display', serif;
+}
+
+/* P2P LOGO IN NAVBAR */
+.logo {
+    height: 45px;
+    width: 60px;
+}
+
+/* ABOUT------------------------------------------------------------------- */
+/* ABOUT BACKGROUND IMAGE */
+.about_bg img {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 555px;
+    left: 0px;
+    top: 0px;
+}
+
+/* ABOUT TEXT */
+.about_para {
+    color: aliceblue;
+}
+
+/* LOGIN---------------------------------------------------------------------- */
+/* LOGIN BACKGROUND IMAGE */
+.login_bg img {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 555px;
+    left: 0px;
+    top: 0px;
+}
+
+.login_headings {
+    text-align: center;
+}
+
+.login_btn{
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+.login_from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35rem;
+    margin: auto;
+    color: whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
+
+.logins_register {
+    color: white;
+    text-align: center;
+}
+
+.logins_register a {
+    color: #6495ED;
+}
+
+.logins_register a:link {
+    text-decoration: none;
+}
+
+/* REGISTER---------------------------------------------------------------------- */
+/* REGISTER BACKGROUND IMAGE */
+.register_bg img {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 555px;
+    left: 0px;
+    top: 0px;
+}
+
+.register_headings {
+    text-align: center;
+}
+
+.register_btn{
+    background-color: #030804;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin: 7px 0;
+    width: 100%;
+    font-size: 18px;
+}
+
+.register_from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35rem;
+    margin: auto;
+    color: whitesmoke;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 13, 0.582);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding: 20px 25px;
+}
+
+.registers_login {
+    color: white;
+    text-align: center;
+}
+
+.registers_login a {
+    color: #6495ED;
+}
+
+.registers_login a:link {
+    text-decoration: none;
+}
