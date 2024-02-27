@@ -1,0 +1,19 @@
+MongoDB
+show databases
+use p2p-recipe
+show collections
+db.recipes.find()
+
+nodemon recipes_collection/index.js
+
+nodemon app.js
+npm start
+
+passport library--- help in node app
+passport-local
+passport-local-mongoose
+
+joi--- a javascript validated tool, not a express specific
+
+// Searching...
+dotenv and cors import for serching
