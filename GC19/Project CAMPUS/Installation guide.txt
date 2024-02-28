@@ -1,0 +1,7 @@
+Step 1: install Xampp
+Step 1: Put the "Campus-Recruitment-Management-System-master" Folder in "" C:\xampp\htdocs\ ""
+Step 2: open xampp.
+Step 3: start apache and my sql in xampp.
+step 4: run web browser and open those link in different tab 
+        Link 1 : http://localhost/phpmyadmin/
+        Link 2 : http://localhost/Campus-Recruitment-Management-System-master/student_dash.php
