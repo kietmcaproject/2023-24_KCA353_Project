@@ -1,0 +1,47 @@
+.chat {
+    background-image: url("../images/design.jpg");
+}
+.chat-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.chat-middle{
+    padding-top: 90px;
+    padding-left: 30px;
+    min-height: 100vh;
+    height: 100%;
+}
+.chat-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #E9E9E9;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.chat-text {
+    width: 90%;
+    height: 40px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 1px solid #E9E9E9;
+}
+.chat-bottom-icon {
+    width: 30px;
+    margin-left: 23px;
+    cursor: pointer;
+}
+.chat-text::placeholder {
+    padding-left: 10px;
+}
+.send-icon{
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.file{
+    display: none;
+}

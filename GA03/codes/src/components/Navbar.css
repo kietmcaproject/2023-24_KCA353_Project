@@ -1,0 +1,14 @@
+.profile-img {
+    margin-top: 10px;
+    border-radius: 50px;
+    width: 50px;
+}
+.reciever-name {
+    color: black;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.logout-icon {
+    width: 15px;
+    cursor: pointer;
+}

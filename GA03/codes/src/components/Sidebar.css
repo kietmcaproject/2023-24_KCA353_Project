@@ -1,0 +1,21 @@
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #D4D4D4;
+    padding: 10px;
+}
+.search-icon {
+    width: 25px;
+    margin-left: 25px;
+}
+.search-text {
+    width: 350px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color: #E9E9E9;
+    border: 1px solid #E9E9E9;
+}
+.chat-link {
+    text-decoration: none;
+}

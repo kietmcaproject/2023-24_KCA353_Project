@@ -1,0 +1,13 @@
+.main-right {
+    background-color: #E9E9E9;
+    height:100vh
+}
+.right-image {
+    width:250px;
+    margin-left: 230px;
+    margin-top: 50px;
+}
+.right-text {
+    text-align: center;
+    font-weight: 400;
+}

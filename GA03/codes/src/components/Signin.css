@@ -1,0 +1,49 @@
+.title {
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 125px;
+}
+.nav-content {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.box {
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    margin-top: 100px;
+    margin-left: 150px;
+    padding: 40px;
+}
+.description {
+   font-weight: 100;
+   color: rgb(31, 30, 30);
+}
+.step {
+    font-weight: 400;
+    font-size: 20px;
+}
+.google {
+    width: 150px;
+}
+.signin-btn {
+    border: 1px solid grey;
+    width: 250px;
+    height:200px;
+    margin-left: 250px;
+    text-align: center;
+    padding-top: 60px;
+    cursor: pointer;
+}
+.signin-card {
+    display: flex;
+}
