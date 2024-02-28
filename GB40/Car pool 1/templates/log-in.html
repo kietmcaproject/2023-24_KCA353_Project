@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/log-in.css">
+    
+    <title>Login Page</title>
+    <!-----Fonts----------->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+       <img src="../static/img/carpool.png" alt="carpool logo">
+       <h1>Car Pool</h1>
+        </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+      
+      <div class="user log">
+              <a href="log-in.html">
+                  <i class="fa-solid fa-user"></i>
+                  <font style="vertical-align: inherit;">Log in</font>
+              </a>
+              /
+              <a href="sign-up.html">
+                  <font style="vertical-align: inherit;">Sign Up</font>
+                  
+              </a>
+          </div>
+      </header> 
+
+      
+        <div class="container">
+            <div class="ujj">
+            <h2>Login</h2>
+            <form action="signup_process.php" method="post" class="form-group">
+                <input type="text" name="username" placeholder="Username" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="submit" value="Login" class="btn">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

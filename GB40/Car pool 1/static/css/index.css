@@ -1,0 +1,659 @@
+body{
+    border: 20px ;
+    display: block;
+    margin: 5px;
+    padding-right: 0px;
+}
+
+
+
+
+
+/*======================================== 
+               HEADER
+===================================== */
+
+.header {
+    background-color: lightskyblue; /* Background color of the header */
+    color: #fff; /* Text color of the header */
+    padding: 20px; /* Padding around the header content */
+    display: flex; /* Use flexbox layout for the header */
+    justify-content: space-between; /* Align children elements with space between them */
+    align-items: center; /* Center align items vertically */
+  }
+  .logo-container {
+    display: flex; /* Use flexbox layout for logo and h1 */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .logo-container img {
+    width: 50px; /* Set width of the logo image */
+    height: 50px; /* Set height of the logo image */
+    margin-right: 10px; /* Add margin between logo and text */
+  }
+  
+  /* Style the navigation links */
+  .header nav a {
+    color: #fff; /* Text color of the nav links */
+    text-decoration: none; /* Remove underline from the links */
+    margin: 0 15px; /* Add margin between the links */
+  }
+  
+  /* Change link color on hover */
+  .header nav a:hover {
+    color: black; /* Change text color to yellow on hover */
+  }
+
+  /* Style the header links */
+  .header a {
+    text-align: center;
+    color: #fff; /* Text color of the header links */
+    text-decoration: none; /* Remove underline from the links */
+    margin: 0 15px; /* Add margin between the links */
+    text-align: center;
+  }
+
+  /* Change link color on hover */
+  .header a:hover {
+    color: black; /* Change text color to yellow on hover */
+  }
+
+/* img{
+        /* padding-bottom: 20px;
+        padding-right: 40px; *
+    height: 50px;
+    width: 50px;
+} */
+/* .navbar {
+    background-color: skyblue;
+    border-radius: 4px;
+}
+.navbar li{
+    padding-top: 20px;
+    float: left;
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+.navbar li a{
+    padding-top: 20px;
+    padding: 6px 6px;
+    text-decoration: none;
+}
+.navbar li a:hover{
+    color: red;
+} 
+.userlog{
+    float: right;
+    padding: 25px 12px;
+}*/
+
+
+/* **************************************************************************************************************** */
+
+
+.home{
+    width: 100%;
+    /* height: 100px; */
+    border: solid gray 2px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left:10px;
+}
+.home img {
+    width: 650px; /* Set the width of the image */
+    height:250px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+}
+.home h1 {
+    text-align: center;
+    font-size: 36px; /* Set the font size for h1 header */
+    color: #333; /* Set the text color */
+    margin-top: 30px;
+    margin-bottom: 15px; /* Add spacing at the bottom of h1 */
+}
+.home h2 {
+    text-align: center;
+    font-size: 24px; /* Set the font size for h2 header */
+    color: #666; /* Set the text color */
+    margin-bottom: 20px; /* Add more spacing at the bottom of h2 */
+  } 
+
+
+
+ 
+
+
+
+/*****************************************************************
+                                        OFFER A RIDE
+****************************************************************** */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .containerr {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color:rgb(178, 225, 243);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label,
+  input,
+  select {
+    margin-bottom: 15px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+
+ 
+
+
+
+/* *****************************************************
+                        4th section
+********************************************************** */
+
+#bottom{
+     border:1px solid black; 
+    padding-top: 50px;
+    padding-left: 10px; 
+    padding-bottom: 20px;
+}
+#bottom table {
+    width: 100%; /* Make the table take up the full width of the section */
+    border-collapse: collapse; /* Collapse table borders */
+}
+#bottom th {
+    padding: 20px; /* Add spacing inside each cell */
+    text-align: center; /* Center-align text within the cells */
+}
+#bottom h1 {
+    font-size: 25px; /* Set the font size for h1 headers */
+    color: gray; /* Set the text color */
+    margin-bottom: 10px; /* Add spacing at the bottom of h1 */
+}
+#bottom h4 {
+    font-size: 17px; /* Set the font size for h4 subheadings */
+    color: black; /* Set the text color */
+}
+
+
+
+
+
+/*------------------------------------------------------------------Bottom----------------------------------------------*/
+
+
+/*
+#bottom{
+    border: solid black;
+    padding-top: 50px;
+    padding-left: 50px; 
+}
+
+#bottom.column1 {
+    
+    line-height: 1.5;
+    float: left;
+    width: 33%;
+    padding: 10px;
+    height: 300px;  -----------Set a fixed height for the column ----------
+    box-sizing: border-box;
+    border-right: 1px solid #ccc; -------Add a vertical border between columns ----------
+}
+
+#bottom.column2 {
+    line-height: 1.5;
+    float: left;
+    width: 33%;
+    padding: 10px;
+    height: 300px; ---------- Set a fixed height for the column ---------
+    box-sizing: border-box;
+    border-right: 1px solid #ccc; ------- Add a vertical border between columns ---------
+}
+
+
+.column3 {
+    line-height: 1.5;
+    float: left;
+    width: 33%;
+    padding: 10px;
+    height: 300px; 
+    box-sizing: border-box;
+    border-right: 1px solid #ccc; 
+} */
+
+/*
+#bottom {
+    /* Add some padding and background color to the section *
+   padding: 50px;
+    background-color: #f0f0f0;
+}
+
+  /* Style the table inside the section *
+#bottom table {
+    width: 100%; /* Make the table take up the full width of the section *
+    border-collapse: collapse; /* Collapse table borders *
+}
+
+  /* Style the table cells (th) inside the table *
+  #bottom th {
+    padding: 20px; /* Add spacing inside each cell *
+    text-align: center; /* Center-align text within the cells *
+  }
+  
+  /* Style the h1 headers *
+  #bottom h1 {
+    font-size: 24px; /* Set the font size for h1 headers *
+    color: #333; /* Set the text color *
+    margin-bottom: 10px; /* Add spacing at the bottom of h1 *
+  }
+  
+  /* Style the h4 subheadings *
+  #bottom h4 {
+    font-size: 16px; /* Set the font size for h4 subheadings *
+    color: #666; /* Set the text color *
+  }
+  
+
+
+/*========================================================
+                                    ABOUT US
+========================================================== */
+
+
+.about {
+    padding: 35px 0px;
+    background-color: #9bb7d3; /* Set the background color as needed */
+    text-align: center; /* Center align the content */
+}
+
+.container {
+    max-width: 960px; /* Set the maximum width of the container */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.box {
+    background-color: #ffffff; /* Set the background color of the box */
+    border-radius: 10px; /* Set border radius as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+    padding: 20px;
+}
+
+.box img {
+    width: 40%; /* Make the image fill the container */
+    border-radius: 10px; /* Optional: Add border radius to the image */
+    margin-bottom: 20px; /* Add some bottom margin to the image */
+}
+
+.heading-section {
+    text-align: center;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #333;
+}
+
+h2.ujj {
+    font-size: 36px;
+    color: #333;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #007bff; /* Default button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Button color on hover */
+}
+
+
+
+/* **************************************************************
+                YOUR SAFETY IS OUR PRIORITY
+************************************************************************* */
+
+/* Style for the outer container */
+.uj {
+    background-color: lightblue;
+    padding-top: 15px;
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px; 
+}
+
+.ujimg {
+    margin-bottom: 0px;
+    padding-top: 5px;
+    align-content: left; 
+    
+}
+
+.ujimg img {
+     width: 300px;  
+    height: 30 px;
+}
+.ujj{
+    padding-top: 5px;
+    text-align: left;
+    padding-left: 20px; 
+    
+ }
+.ujj h1 {
+    padding-top: 0px;
+    font-size: 34px; 
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.ujj h3 {
+    font-size: 20px;
+    color: #666; 
+    text-align: center; 
+}
+
+
+/* **************************************************************************
+                                We serve
+***************************************************************************** */
+
+
+
+.weserve{
+    background-color: #E0E7FF;
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 20px;
+}
+.weserve .box{
+    padding: 10px;
+}
+.weserve .box h1{
+    text-align: center;
+}
+.search-results {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin: 10px;
+}
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+}
+.search-result img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out; 
+}
+.search-result:hover img{
+    opacity: 0.8;
+}
+
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: gray;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize  ;
+}
+
+/* ************************************************************************************************************************ */
+
+
+
+/* --------Testimonal------*/
+/* .testimony {
+    text-align: center;
+    padding: 20px;
+}
+
+.user-img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.position {
+    color: #777;
+} */
+
+/* Apply flexbox to the parent container to align items in a row */
+.testimonials-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent items from wrapping into the next line */
+    overflow-x: auto; /* Enable horizontal scrolling if content overflows */
+    gap: 20px; /* Add some space between the items */
+}
+
+/* Individual testimony item styles */
+.testimony {
+    flex: 0 0 300px; /* Each testimony item takes up 300px width */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.user-img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; /* Make the user image round */
+    margin: 0 auto 10px; /* Center the user image */
+}
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column; /* Change direction to column on smaller screens */
+    }
+
+    .testimony {
+        flex: 0 0 100%; /* Each testimony item takes up 100% width on smaller screens */
+        margin-bottom: 20px; /* Add some space between the items */
+    }
+}
+
+
+
+/* ************************************************************
+                                 How it Work
+**************************************************************** */
+
+.work-section {
+    margin: 0;
+    padding: 40px 0 20px;
+    background-color: lightblue;
+}
+.container {
+    max-width: 100%;
+    
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+[data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+}
+.work-img-info .work-img {
+    position: absolute;
+    bottom: 0;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.work-details {
+    padding-left: 20px;
+}
+[data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+}
+.section-header-one h5 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #0E82FD;
+    margin-bottom: 10px;
+}
+.section-header-one .section-title {
+    display: inline-block;
+    position: relative;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+[data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+}
+.work-info {
+    margin-bottom: 20px;
+}
+.work-info .work-icon {
+    margin-right: 20px;
+}
+.work-info .work-icon span {
+    min-width: 70px;
+    height: 70px;
+    background: #E0E7FF;
+    border-radius: 10px;
+    -webkit-transition: 0.7s;
+    -ms-transition: 0.7s;
+    transition: 0.7s;
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+}
+.work-info .work-icon span img {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -webkit-transition: 0.7s;
+    -ms-transition: 0.7s;
+    transition: 0.7s;
+}
+.work-info .work-content h5 {
+    margin-bottom: 10px;
+}
+.work-info .work-content p {
+    font-size: 14px;
+}
+
+
+
+
+/* ********************************************************************
+                                 Terms and condition
+******************************************************************** */
+.terms{
+    
+    padding: 100px;
+    font-size: large;
+}
+
+
+/*=============================================================
+                               FOOTER
+=============================================================== */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish a Ride</title>
+    <link href="../static/css/publish-ride.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+       <img src="../static/img/carpool.png" alt="carpool logo">
+       <h1>Car Pool</h1>
+        </div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="#">Contact</a>
+        <a href="publish ride.html">Publish</a>
+      </nav>
+      
+      <div class="user log">
+              <a href="login.html">
+                  <i class="fa-solid fa-user"></i>
+                  <font style="vertical-align: inherit;">Log in</font>
+              </a>
+              /
+              <a href="signin.html">
+                  <font style="vertical-align: inherit;">Sign Up</font>
+                  
+              </a>
+          </div>
+      </header> 
+
+
+
+
+
+
+    <div class="container">
+        <h2>Publish a Ride</h2>
+        <div id="publish-ride-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="arrival">Arrival:</label>
+                    <input type="text" id="arrival" name="arrival" required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Additional Details:</label>
+                    <textarea id="details" name="details" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                <label for="no of passenger">No. of Passenger:</label>
+                    <select id="rideType" name="rideType" required>
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    </select>
+                    <br>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Publish Ride">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

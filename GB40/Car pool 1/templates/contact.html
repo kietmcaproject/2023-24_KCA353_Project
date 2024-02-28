@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../static/css/contact.css">
+</head>
+<body>
+    
+<section class="contact-section" style="padding-top:100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-12">
+                <div class="section-inner-header contact-inner-header">
+                    <h6>Get in touch</h6>
+                    <h2>Have Any Question?</h2>
+                </div>
+                <div class="card contact-card">
+                    <div class="card-body">
+                        <div class="contact-icon">
+                            <i class="feather-map-pin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>A-14, Z-Block, Najafgarh, New Delhi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card contact-card">
+                    <div class="card-body">
+                        <div class="contact-icon">
+                            <i class="feather-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone Number</h4>
+                            <p>+91 902-780-0200</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card contact-card">
+                    <div class="card-body">
+                        <div class="contact-icon">
+                            <i class="feather-mail"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Address</h4>
+                            <p>pms@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-7 col-md-12 d-flex">
+                <div class="card contact-form-card w-100">
+                    <div class="card-body">
+                        <form method="post" action="/contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" name="name" class="form-control" placeholder="Enter Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" name="email" class="form-control" placeholder="Enter Email Address" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="text" name="phone" class="form-control" placeholder="Enter Phone Number">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Services</label>
+                                        <input type="text" name="services" class="form-control" placeholder="Enter Services">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Message</label>
+                                        <textarea class="form-control" name="message" placeholder="Enter your comments" data-gramm="false" wt-ignore-input="true" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group form-group-btn mb-0">
+                                        <button type="submit" class="btn btn-primary prime-btn">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+</body>
+</html>

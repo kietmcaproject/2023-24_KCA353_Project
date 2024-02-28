@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.header {
+    background-color: #333; /* Background color of the header */
+    color: #fff; /* Text color of the header */
+    padding: 20px; /* Padding around the header content */
+    display: flex; /* Use flexbox layout for the header */
+    justify-content: space-between; /* Align children elements with space between them */
+    align-items: center; /* Center align items vertically */
+  }
+  .logo-container {
+    display: flex; /* Use flexbox layout for logo and h1 */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .logo-container img {
+    width: 50px; /* Set width of the logo image */
+    height: 50px; /* Set height of the logo image */
+    margin-right: 10px; /* Add margin between logo and text */
+  }
+  
+  /* Style the navigation links */
+  .header nav a {
+    color: #fff; /* Text color of the nav links */
+    text-decoration: none; /* Remove underline from the links */
+    margin: 0 15px; /* Add margin between the links */
+  }
+  
+  /* Change link color on hover */
+  .header nav a:hover {
+    color: #ffcc00; /* Change text color to yellow on hover */
+  }
+
+  /* Style the header links */
+  .header a {
+    text-align: center;
+    color: #fff; /* Text color of the header links */
+    text-decoration: none; /* Remove underline from the links */
+    margin: 0 15px; /* Add margin between the links */
+    text-align: center;
+  }
+
+  /* Change link color on hover */
+  .header a:hover {
+    color: skyblue; /* Change text color to yellow on hover */
+  }
+
+
+  
+.weserve{
+    border-radius: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.weserve .box{
+    padding: 10px;
+}
+.weserve .box h1{
+    text-align: center;
+}
+.search-results {
+    display: flex;
+    padding-top: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin: 10px;
+}
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+
+}
+.search-result img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out; 
+}
+.search-result:hover img{
+    opacity: 0.8;
+}
+
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: gray;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize  ;
+}

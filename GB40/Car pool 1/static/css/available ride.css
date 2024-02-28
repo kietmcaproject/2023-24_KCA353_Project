@@ -1,0 +1,115 @@
+body{
+    border: 20px ;
+    display: block;
+    margin: 5px;
+    padding-right: 0px;
+    font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+
+}
+
+.header {
+    background-color: #333; /* Background color of the header */
+    color: #fff; /* Text color of the header */
+    padding: 20px; /* Padding around the header content */
+    display: flex; /* Use flexbox layout for the header */
+    justify-content: space-between; /* Align children elements with space between them */
+    align-items: center; /* Center align items vertically */
+  }
+  .logo-container {
+    display: flex; /* Use flexbox layout for logo and h1 */
+    align-items: center; /* Center align items vertically */
+  }
+  
+  .logo-container img {
+    width: 50px; /* Set width of the logo image */
+    height: 50px; /* Set height of the logo image */
+    margin-right: 10px; /* Add margin between logo and text */
+  }
+  
+  /* Style the navigation links */
+  .header nav a {
+    color: #fff; /* Text color of the nav links */
+    text-decoration: none; /* Remove underline from the links */
+    margin: 0 15px; /* Add margin between the links */
+  }
+  
+  /* Change link color on hover */
+  .header nav a:hover {
+    color: #ffcc00; /* Change text color to yellow on hover */
+  }
+
+  /* Style the header links */
+  .header a {
+    text-align: center;
+    color: #fff; /* Text color of the header links */
+    text-decoration: none; /* Remove underline from the links */
+    margin: 0 15px; /* Add margin between the links */
+    text-align: center;
+  }
+
+  /* Change link color on hover */
+  .header a:hover {
+    color: skyblue; /* Change text color to yellow on hover */
+  }
+
+
+  
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.ride-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 700px;
+  display: flex;
+}
+.content{
+    margin: auto;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+}
+
+ img {
+    margin-right: 30px;
+    margin-top: 20px;
+    width: 200px;
+    height: 140px;
+} 
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
