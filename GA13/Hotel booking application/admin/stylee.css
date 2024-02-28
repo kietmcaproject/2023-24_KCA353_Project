@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    width: 100%;
+    position: sticky;
+    height: 100px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px
+}
+.left-nav{
+    width: 30%;
+}
+.left-nav img{
+    width: 70px;
+    border-radius: 50%;
+    padding-left: 30px;
+}
+.right-nav{
+    width: 70%;
+}
+.right-nav ul{
+  display: flex;
+}
+.right-nav ul li{
+   list-style: none;
+}
+.right-nav ul li a{
+    text-decoration: none;
+    color: wheat;
+    font-family: 'Baloo 2', cursive;
+    padding: 0px 10px;
+    font-size: 22px;
+    font-weight: 400;
+    position: relative;
+    left: 30px;
+    }
+.right-nav ul li a:hover{
+    color: black;
+    background: white;
+    border-radius: 30px;
+}
+.wrapper{
+    
+    width: 860px;
+    margin: 0 auto;
+}
+.wrapper-container{
+    background-color: red;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    border-radius: 50px;
+}
+.wrapper ul{
+    list-style: none;
+    padding-top: 2%;
+}
+.wrapper ul li{
+    background: #262626;
+    width: 170px;
+    border: 1px solid #fff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    
+   
+    position: relative;
+
+}
+.wrapper ul li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+.wrapper ul li:hover{
+    background: crimson;
+}
+.wrapper ul ul{
+    display: none;
+}
+
+.wrapper ul li:hover > ul{
+    display: block;
+}
+
+
+/* home */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-bottom: 100px;
+ 
+ }
+ #home::before{
+     position: absolute;
+     content: "";
+     height: 100%;
+     width: 100%;
+     z-index: -1;
+     opacity: 0.89;
+     background: url('../img/hotel2.jpg') center center/cover no-repeat;
+ 
+ }
+
+ /* delux ac  */
+ .delux-insert{
+     margin-top: 230px;
+     margin-left: 500px;
+ }
