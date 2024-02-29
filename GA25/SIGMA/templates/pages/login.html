@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block title %} | Login {% endblock %}
+{%block content%}
+<div class="container" style="background-color: white;">
+  <!-- Breadcrumb -->
+  <section id="bc" class="container" >
+    <div class="container">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'login' %}">Login</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+  <!--Breadcrumb Ends here -->
+  <div class="row" style="height: 10cm;">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Log In as Student</h5>
+          <p class="card-text">Log in to your own dashboard and be SIGMA.</p>
+          <a href="{%url 'studentlogin' %}" class="btn btn-primary">Click Here</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Log In as Counsellor</h5>
+          <p class="card-text">Log in to your own dashboard and contribute to SIGMA.</p>
+          <a href="{%url 'counsellorlogin'%}" class="btn btn-primary">Click Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

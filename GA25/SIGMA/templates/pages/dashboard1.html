@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+<!--NAv bar-->
+<!--Navbar ends here-->
+<div class="container-fluid" style="background-color: white;">
+  <!-- Breadcrumb -->
+  <section id="bc" class="container">
+    <div class="container">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'dashboard1' %}">{{user.first_name}}'s Dashboard</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+  <!--Breadcrumb Ends here -->
+  <div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col border border-info p-2 mb-2 border-opacity-75">
+          <!-- Enrolled div -->
+          <h3>Enrolled Courses</h3>
+          {%if ALLenrolled%}
+          {%for course in ALLenrolled %}
+          <div class="card w-75 mb-3" style="justify-content: center; align-items:center; margin:auto;">
+            <div class="card-body">
+              <img src="{{course.course_id.image.url}}" class="card-img-top" alt="AI Image">
+              <h5 class="card-title">{{course.course_id.name}} </h5>
+              <a href="{% url 'enrolledcourse' course.course_id.courses_id %}" class="btn btn-primary">Complete
+                Course</a>
+            </div>
+          </div>
+          {%endfor%}
+          {%else%}
+          <p>You are not enrolled in any course</p>
+          {%endif%}
+        </div>
+
+        <!-- separater -->
+
+        <div class="col border border-info p-2 mb-2 border-opacity-75">
+          <!-- More Courses div -->
+          <h3>More Courses</h3>
+          <!-- Loop through courses-->
+          {% if ALLcourses %}
+          {%for course in ALLcourses %}
+          <div class="card w-75 mb-3" style="justify-content: center; align-items:center; margin:auto;">
+            <div class="card-body">
+              <img src="{{ course.image.url }}" width="612px" height="275px" class="card-img-top" alt="WebTech img">
+              <h5 class="card-title">{{course.name }}</h5>
+              <a href="{% url 'viewCourse' course.courses_id %}" class="btn btn-primary">View Course</a>
+            </div>
+          </div>
+          {%endfor%}
+          {%else%}
+          <div class="card w-75 mb-3" style="justify-content: center; align-items:center; margin:auto;">
+            <div class="card-body">
+              <img src="{% static 'img/webtech.jpeg' %}" width="612px" height="275px" class="card-img-top"
+                alt="WebTech img">
+              <h5 class="card-title">No Course Available Right Now</h5>
+              <a href="..." class="btn btn-primary">Disabled</a>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

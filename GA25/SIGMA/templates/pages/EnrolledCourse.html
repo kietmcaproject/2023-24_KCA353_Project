@@ -1,0 +1,63 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+  <div class="container-fluid" style="background-color: white;">
+    <!-- Breadcrumb -->
+    <section id="bc" class="container">
+      <div class="container">
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="{% url 'dashboard1' %}">{{user.first_name}}'s Dashboard</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="">Welcome back to {{courseunitskey}} Course</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+  
+  <!--Breadcrumb Ends here -->
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <img src="{{courseunitskey.course_id.image.url}}" height="auto" width="auto" alt="CourseImage" >
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h2>Course Name : {{courseunitskey.course_id}}</h2>
+        <h2>Instructor : {{courseunitskey.course_id.counsellor_id.firstName}} {{courseunitskey.course_id.counsellor_id.lastName}}</h2>
+        <h2>Course Description : {{courseunitskey.course_id.description}}</h2>
+        <h2>Course Duration : {{courseunitskey.course_id.duration}}</h2>
+        <h2>Total Units : 5 </h2>    
+      </div>
+    </div>
+    <table class="table table-primary table-borderless">
+        <thead>
+            <tr>
+                <th scope="col">Unit 1</th>
+                <th scope="col">Unit 2</th>
+                <th scope="col">Unit 3</th>
+                <th scope="col">Unit 4</th>
+                <th scope="col">Unit 5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="{{courseunitskey.unit1}}" download="{{courseunitskey.unit1}}">Download</a></td>
+                <td><a href="{{courseunitskey.unit2}}" download="{{courseunitskey.unit2}}">Download</a></td>
+                <td><a href="{{courseunitskey.unit3}}" download="{{courseunitskey.unit3}}">Download</a></td>
+                <td><a href="{{courseunitskey.unit4}}" download="{{courseunitskey.unit4}}">Download</a></td>
+                <td><a href="{{courseunitskey.unit5}}" download="{{courseunitskey.unit5}}">Download</a></td>
+                
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+  {%endblock%}

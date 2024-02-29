@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block title %} | Login |Counsellor{% endblock %}
+{%block content%}
+<div class="container" style="background-color: white;">
+    <!-- Breadcrumb -->
+    <section id="bc" class="container" style="font-family:'Caveat', cursive">
+        <div class="container">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'counsellorlogin' %}">Counsellor Login</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <!--Breadcrumb Ends here -->
+    <form class="container" style="height: 10cm;" method="POST">
+        {% csrf_token %}
+        <div class="mb-3 container">
+            <label for="exampleInputEmail1" class="form-label"> Enter Username</label>
+            <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3 container">
+            <label for="exampleInputPassword1" class="form-label">Enter Password</label>
+            <input type="password" class="form-control" name="password" id="password" required>
+        </div>
+        <div class="mb-3 container">
+            <input type="checkbox" name="checkbox" class="form-check-input" id="exampleCheck1" value="checkboxvalue" required>
+            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+        </div>
+        <button type="submit" class="btn btn-primary container-fluid">Submit</button>
+    </form>
+</div>
+{%endblock%}

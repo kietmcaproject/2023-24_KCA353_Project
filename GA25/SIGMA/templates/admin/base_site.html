@@ -1,0 +1,14 @@
+{%extends 'admin/base.html'%}
+{% load static %}
+{%block branding%}
+<h1 id="head" style="background-color: rgb(5, 5, 5);">
+    <img src="{% static 'img/logo.jpg'%}" alt="Brand-image" class="brand_img" height="80" width="80"><span
+        style="justify-content: center;margin-left:0.4cm;font-family:'Noto Serif',serif; color:white; 
+        font-size:1cm; padding: 1vh;background-image:url(https://petapixel.com/assets/uploads/2023/07/ezgif-5-8ea32bd820.gif);background-size:cover;background-position:center;background-clip:text;-webkit-background-clip:text;color:transparent;font-weight:1000">SIGMA
+        Administration
+        Area</span>
+</h1>
+{%endblock%}
+{%block extrastyle%}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{%endblock%}

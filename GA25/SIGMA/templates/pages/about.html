@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block title%}|About{%endblock%}
+{%block content%}
+<div class="col border border-info p-2 mb-2 border-opacity-75 text-center bg-white color-black" style=" background-color: rgb(255, 255, 255); height:100vh;">
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+      <div class="container">
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="{% url 'about' %}">About</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <h6
+      style="text-align: center; justify-content:center;align-items:center; padding: 30px;font-size:x-large;">
+      This is Minor Project in progress for MCA semester 3</h6>
+</div>
+{%endblock%}

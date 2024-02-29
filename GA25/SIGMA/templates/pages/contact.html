@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block title%}|About{%endblock%}
+{%block content%}
+<div class="col border border-info p-2 mb-2 border-opacity-75 text-center bg-white color-black" style="background-color: white; height:100vh">
+  <div>
+    <!-- Breadcrumb -->
+    <section id="bc" class="mt-3">
+      <div class="container">
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="{% url 'contact' %}">Contact</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+    <h6
+      style="text-align: center; justify-content:center;align-items:center;margin: 2px; padding: 30px;font-size:x-large;">
+      Mca Section A</h6>
+  </div>
+</div>
+{%endblock%}

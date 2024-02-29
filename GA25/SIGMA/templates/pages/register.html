@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block title %} | Register {% endblock %}
+{%block content%}
+<!-- Breadcrumb -->
+<div class="container" style="background-color: white;">
+  <section id="bc" class=" container" style="font-family:'Caveat', cursive">
+    <div class="container">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'register' %}">Register</a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+  <!--Breadcrumb Ends here -->
+  <div class="row" style="height: 10cm;">
+    <div class="col-sm-6" style="height: 10cm;">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Register as Student</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="{%url 'studentregister' %}" class="btn btn-primary">Click Here</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6" style="height: 10cm;">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Register as Counsellor</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="{%url 'counsellorregister'%}" class="btn btn-primary">Click Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

@@ -1,0 +1,58 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{% block title %} |Browse Counsellors {% endblock %}
+
+{%block content%}
+
+<div class="col border border-info p-2 mb-2 border-opacity-75 text-center bg-white color-black">
+    <!-- More Courses div -->
+    <h3 > Experienced Counsellors</h3>
+    <!-- Loop through courses-->
+        <!-- Breadcrumb -->
+    <section id="bc" class="container">
+        <div class="container">
+        <nav>
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{% url 'index' %}">Home</a>
+            </li>
+            {%if user.is_authenticated%}
+            <li class="breadcrumb-item">
+                <a href="{% url 'dashboard1' %}">{{user.first_name}}'s Dashboard</a>
+            </li>
+            {%endif%}
+            <li class="breadcrumb-item">
+                <a href="">View Counsellors</a>
+            </li>
+            </ol>
+        </nav>
+        </div>
+    </section>
+
+    <!--Breadcrumb Ends here -->
+    {% if allcounsellorkey %}
+    {%for counsellor in allcounsellorkey %}
+    <div class="card w-75 mb-3" style="justify-content: center; align-items:center; margin:auto;">
+        <div class="card-body">
+            <img src="{{ counsellor.profile_picture.url }}" width="612px" height="275px" class="card-img-top" alt="WebTech img">
+            <h5 class="card-title">{{counsellor.firstName }}{{counsellor.lastName }}</h5>
+            <h5 class="card-title">Contact through-{{counsellor.email}}</h5>
+            
+        </div>
+    </div>
+    {%endfor%}
+    {%else%}
+    <div class="card w-75 mb-3" style="justify-content: center; align-items:center; margin:auto;">
+        <div class="card-body">
+            <img src="{% static 'img/webtech.jpeg' %}" width="612px" height="275px" class="card-img-top"
+                alt="WebTech img">
+            <h5 class="card-title">No Course Available Right Now</h5>
+            <a href="..." class="btn btn-primary">Disabled</a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+
+{%endblock%}

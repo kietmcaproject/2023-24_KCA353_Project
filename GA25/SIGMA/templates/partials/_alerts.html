@@ -1,0 +1,24 @@
+{%load static%}
+{%if messages%}
+{%for message in messages%}
+<div id="message" class="container">
+    <div class="alert alert-{{message.tags}} alert-dismissible text-center fade show" role="alert">
+        <strong>
+            {%if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+            Error
+            {%else%}
+            {{message.tags|title}}
+            {%endif%}
+            {{message}}
+        </strong>
+        <!-- <button type="button" data-bs-dismiss="alert"><span aria-hidden="true">&times;</span></button> -->
+        
+    </div>
+</div>
+{%endfor%}
+{%endif%}
+<script>
+    setTimeout(function () {
+        $('#message').fadeOut('slow');
+    }, 3000);
+</script>

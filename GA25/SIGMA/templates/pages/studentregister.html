@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block title %} | Register | Student {% endblock %}
+{%block content%}
+<!-- Breadcrumb -->
+<div class="container" style="background-color: white;">
+    <section id="bc" class=" container">
+        <div class="container">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="{% url 'studentregister' %}">Student-Registeration</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+    <!--Breadcrumb Ends here -->
+    <form class="container" method="POST">
+        {% csrf_token %}
+        <div class="mb-3 container">
+            <label for="form-check-label" class="form-label">Enter First Name</label>
+            <input type="text" name="first_name" class="form-control" id="first_name" required>
+        </div>
+        <div class="mb-3 container">
+            <label for="form-check-label" class="form-label">Enter Last Name</label>
+            <input type="text" name="last_name" class="form-control" id="last_name" required>
+        </div>
+        <div class="mb-3 container">
+            <label for="form-check-label" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" id="username" required>
+        </div>
+        <div class="mb-3 container">
+            <label for="exampleInputEmail1" class="form-label"> Enter Email address</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3 container">
+            <label for="exampleInputPassword1" class="form-label">Enter Password</label>
+            <input type="password" name="password1" class="form-control" id="password" required>
+        </div>
+        <div class="mb-3 container">
+            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+            <input type="password" name="password2" class="form-control" id="confirmpassword" required>
+        </div>
+        <div class="mb-3 container">
+            <input type="checkbox" name="checkbox" class="form-check-input" id="checkbox" required>
+            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+        </div>
+        <button type="submit" class="btn btn-primary container-fluid">Register</button>
+    </form>
+</div>
+{%endblock%}
