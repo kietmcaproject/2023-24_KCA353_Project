@@ -1,0 +1,1630 @@
+Index.java
+
+
+
+package Hms;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class Index extends JFrame implements ActionListener
+{
+    JFrame f;
+    JLabel l1,l2,l3,l4;
+    JButton b1,b2,b3,b4;
+    int loginid;
+    Index()
+    {
+        f=new JFrame("Index Page");
+        f.setBackground(Color.WHITE);
+        f.setLayout(null);
+        
+        l1=new JLabel();
+        l1.setBounds(0,0,800,570);
+        l1.setLayout(null);
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("Hms/Icons/first page.jpg"));
+        Image i1=img.getImage().getScaledInstance(800,570,Image.SCALE_SMOOTH);
+        ImageIcon img1=new ImageIcon(i1);
+        l1.setIcon(img1);
+        
+        l2=new JLabel("E_Hospital");
+        l2.setBounds(70,315,500,30);
+        l2.setFont(new Font("Airal",Font.BOLD,30));
+        l2.setForeground(Color.BLACK);
+        l1.add(l2);
+        f.add(l1);
+        
+        l3=new JLabel("Provide best quality healthcare for you");
+        l3.setBounds(86,340,500,50);
+        l3.setFont(new Font("Airal",Font.BOLD,13));
+        l3.setForeground(Color.BLACK);
+        
+        l1.add(l3);
+
+        b1 = new JButton("Doctor");
+        b1.setBackground(Color.BLACK);
+        b1.setForeground(Color.WHITE);
+        b1.setBounds(50,390,150,40);
+        
+        l1.add(b1);
+        
+        b2=new JButton("Patient");   
+        b2.setBackground(Color.BLACK);
+        b2.setForeground(Color.WHITE);
+        b2.setBounds(220,390,150,40);
+        
+        l1.add(b2);
+        
+        b3=new JButton("Receptionist");   
+        b3.setBackground(Color.BLACK);
+        b3.setForeground(Color.WHITE);
+        b3.setBounds(50,450,150,40);
+        
+        l1.add(b3);
+        
+        b4=new JButton("Admin");   
+        b4.setBackground(Color.BLACK);
+        b4.setForeground(Color.WHITE);
+        b4.setBounds(220,450,150,40);
+        
+        l1.add(b4);
+        
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
+        b4.addActionListener(this);
+        
+        
+        f.setSize(800,570);
+//        f.setUndecorated(true);
+        f.setLocation(300,100);
+        f.setVisible(true);
+        f.setResizable(false);
+        
+    }
+    public void actionPerformed(ActionEvent ae)
+    {
+        if(ae.getSource() == b1)
+        {
+            loginid=4;
+            new LoginPage(loginid).setVisible(true);
+            f.setVisible(false);
+        }
+        if(ae.getSource()==b2)
+        {
+            loginid=3;
+            new LoginPage(loginid).setVisible(true);
+            f.setVisible(false);
+        }
+        if(ae.getSource()==b3)
+        {
+            loginid=2;
+            new LoginPage(loginid).setVisible(true);
+            f.setVisible(false);
+        }
+        if(ae.getSource()==b4)
+        {
+            loginid=1;
+            new LoginPage(loginid).setVisible(true);
+            f.setVisible(false);
+        }
+    }
+    public static void main(String[] args) 
+    {
+        new Index();
+    }
+}
+
+
+
+
+
+ConnectionClass.java
+
+
+
+package Hms;
+
+import java.sql.*;
+
+public class ConnectionClass 
+{
+    Connection con;
+    Statement stm;
+    ConnectionClass()
+    {
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospital","root","rooot");
+            stm=con.createStatement();
+        }
+        catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+    public static void main(String[] args) 
+    {
+        new ConnectionClass();
+    }
+}
+
+
+
+AddAppointment.java
+
+
+
+package Hms;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.sql.*;
+import java.util.Random;
+
+public class AddAppointment extends JFrame implements ActionListener
+{
+    JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13,l14,l15,l16,l17,l18;
+    JButton bt1,bt2,bt3;
+    JPanel p1,p2,p3;
+    JTextField tf1,tf2,tf3,tf4,tf5,tf6,tf7,tf8,tf9,tf10,tf11,tf12;
+    Font f,f1;
+    Choice ch,ch1,ch2;
+    String q;
+    
+    
+    AddAppointment(String username, int login_id)
+    {
+        super("Add Appointment");
+        setLocation(450,10);
+        setSize(740,730);
+        
+        f=new Font("Arial",Font.BOLD,25);
+        f1=new Font("Arial",Font.BOLD,18);
+        
+        ch=new Choice();
+        ch1=new Choice();
+        ch2=new Choice();
+        
+        ch2.add("10AM");
+        ch2.add("11AM");
+        ch2.add("12AM");
+        ch2.add("2PM");
+        ch2.add("3PM");
+        ch2.add("4PM");
+        ch2.add("5PM");
+        try
+        {
+            ConnectionClass obj=new ConnectionClass();
+            if(login_id==3)
+            {
+                q="select username from patient where username='"+username+"'";
+            }
+            else
+            {
+                q="select username from patient";
+            }
+            ResultSet rest=obj.stm.executeQuery(q);
+            while(rest.next())
+            {
+                ch.add(rest.getString("username"));
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        
+        l1=new JLabel("Add Appointment");
+        l2=new JLabel("Username");
+        l3=new JLabel("Name");
+        l4=new JLabel("Email");
+        l5=new JLabel("Father Name");
+        l6=new JLabel("Phone");
+        l7=new JLabel("Material Status");
+        l8=new JLabel("City");
+        l9=new JLabel("Gender");
+        l10=new JLabel("Blood");
+        l11=new JLabel("Age");
+        l13=new JLabel("Date of Birth");
+        l14=new JLabel("Deceased");
+        l15=new JLabel("Check Doctor Availability");
+        l16=new JLabel("Select Doctor");
+        l17=new JLabel("Appointment Date");
+        l18=new JLabel("Appointment Time");
+        
+        
+        tf1=new JTextField();
+        tf2=new JTextField();
+        tf3=new JTextField();
+        tf4=new JTextField();
+        tf5=new JTextField();
+        tf6=new JTextField();
+        tf7=new JTextField();
+        tf8=new JTextField();
+        tf9=new JTextField();
+        tf10=new JTextField();
+        tf11=new JTextField();
+        tf12=new JTextField();
+        
+        tf1.setEditable(false);
+        tf2.setEditable(false);
+        tf3.setEditable(false);
+        tf4.setEditable(false);
+        tf5.setEditable(false);
+        tf6.setEditable(false);
+        tf7.setEditable(false);
+        tf8.setEditable(false);
+        tf9.setEditable(false);
+        tf10.setEditable(false);
+        
+        bt1=new JButton("Book Appointment");
+        bt2=new JButton("Back");
+        bt3=new JButton("Check");
+                
+        l1.setHorizontalAlignment(JLabel.CENTER);
+        
+        bt1.addActionListener(this);
+        bt2.addActionListener(this);
+        bt3.addActionListener(this);
+        
+        l1.setFont(f);
+        l2.setFont(f1);
+        l3.setFont(f1);
+        l4.setFont(f1);
+        l5.setFont(f1);
+        l6.setFont(f1);
+        l7.setFont(f1);
+        l8.setFont(f1);
+        l9.setFont(f1);
+        l10.setFont(f1);
+        l11.setFont(f1);
+        l13.setFont(f1);
+        l14.setFont(f1);
+        l15.setFont(f1);
+        l16.setFont(f1);
+        l17.setFont(f1);
+        l18.setFont(f1);
+        ch.setFont(f1);
+        ch1.setFont(f1);
+        ch2.setFont(f1);
+        
+        tf1.setFont(f1);
+        tf2.setFont(f1);
+        tf3.setFont(f1);
+        tf4.setFont(f1);
+        tf5.setFont(f1);
+        tf6.setFont(f1);
+        tf7.setFont(f1);
+        tf8.setFont(f1);
+        tf9.setFont(f1);
+        tf10.setFont(f1);
+        tf11.setFont(f1);
+        tf12.setFont(f1);
+        
+        bt1.setFont(f1);
+        bt2.setFont(f1);
+        bt3.setFont(f1);
+        
+        bt1.setBackground(Color.BLUE);
+        bt2.setBackground(Color.RED);
+        bt3.setBackground(Color.BLACK);
+        
+        bt1.setForeground(Color.WHITE);
+        bt2.setForeground(Color.WHITE);
+        bt3.setForeground(Color.WHITE);
+        
+        p1=new JPanel();
+        p1.setLayout(new GridLayout(1,1,10,10));
+        p1.add(l1);
+        
+        p2=new JPanel();
+        p2.setLayout(new GridLayout(17,2,10,10));
+        
+        p2.add(l2);
+        p2.add(ch);
+        p2.add(l3);
+        p2.add(tf1);
+        p2.add(l4);
+        p2.add(tf2);
+        p2.add(l5);
+        p2.add(tf3);
+        p2.add(l6);
+        p2.add(tf4);
+        p2.add(l7);
+        p2.add(tf5);
+        p2.add(l8);
+        p2.add(tf6);
+        p2.add(l9);
+        p2.add(tf7);
+        p2.add(l10);
+        p2.add(tf8);
+        p2.add(l11);
+        p2.add(tf9);
+        p2.add(l13);
+        p2.add(tf10);
+        p2.add(l14);
+        p2.add(tf11);
+        p2.add(l15);
+        p2.add(bt3);
+        p2.add(l16);
+        p2.add(ch1);
+        p2.add(l17);
+        p2.add(tf12);
+        p2.add(l18);
+        p2.add(ch2);
+        p2.add(bt1);
+        p2.add(bt2);
+        
+        p3=new JPanel();
+        p3.setLayout(new GridLayout(1,1,10,10));
+        
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("Hms/Icons/Appointment.png"));
+        Image img1=img.getImage().getScaledInstance(300,500,Image.SCALE_SMOOTH);
+        ImageIcon ic1=new ImageIcon(img1);
+        l12 = new JLabel(ic1);
+        
+        p3.add(l12);
+        
+        setLayout(new BorderLayout(10,10));
+        add(p1,"North");
+        add(p2,"Center");       
+        add(p3,"West");
+        
+        ch.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent arg0)
+            {
+                try
+                {
+                    ConnectionClass obj2=new ConnectionClass();
+                    String username=ch.getSelectedItem();
+                    String q1="select * from patient where username='"+username+"'";
+                    ResultSet rest1=obj2.stm.executeQuery(q1);
+                    while(rest1.next())
+                    {
+                        tf1.setText(rest1.getString("name"));
+                        tf2.setText(rest1.getString("email"));
+                        tf3.setText(rest1.getString("father_name"));
+                        tf4.setText(rest1.getString("phone"));
+                        tf5.setText(rest1.getString("material_status"));
+                        tf6.setText(rest1.getString("city"));
+                        tf7.setText(rest1.getString("gender"));
+                        tf8.setText(rest1.getString("blood"));
+                        tf9.setText(rest1.getString("age"));
+                        tf10.setText(rest1.getString("dob"));
+                        tf11.setText(rest1.getString("deceased"));
+                        
+                    }
+                }
+                catch(Exception exx)
+                {
+                    exx.printStackTrace();
+                }
+            }
+        });
+    }
+    public void actionPerformed(ActionEvent e)
+    {
+        if(e.getSource()==bt3)
+        {
+            ch1.removeAll();
+            try
+            {
+                ConnectionClass obj3=new ConnectionClass();
+                String q1="select * from doctor where spcialization='"+tf11.getText()+"' and availablity='Yes'";
+                ResultSet rest4=obj3.stm.executeQuery(q1);
+                
+//                if(!rest4.next())
+//                {
+//                    JOptionPane.showMessageDialog(null, "Sorry, Doctor is not available ");
+//                }
+                
+                   while(rest4.next())
+                {
+                    ch1.add(rest4.getString("username"));
+                }
+//                   if(!rest4.next())
+//                {
+//                    JOptionPane.showMessageDialog(null, "Sorry, Doctor is not available ");
+//                   
+//                }
+            }
+            catch(Exception eee)
+            {
+                eee.printStackTrace();
+            }
+        }
+        if(e.getSource()==bt1)
+        {
+            String username=ch.getSelectedItem();            
+            String name=tf1.getText();
+            String email=tf2.getText();
+            String fname=tf3.getText();
+            String phone=tf4.getText();
+            String mstatus=tf5.getText();
+            String city=tf6.getText();
+            String gender=tf7.getText();
+            String blood=tf8.getText();
+            String age=tf9.getText();
+            String dob=tf10.getText();
+            String deceased=tf11.getText();
+            String doctor=ch1.getSelectedItem();  
+            String app_date=tf12.getText();
+            String app_time=ch2.getSelectedItem();  
+            String app_status="Open";  
+            Random r = new Random();
+            String app_id=""+Math.abs(r.nextInt() % 100000);
+            
+            
+            try
+            {
+                ConnectionClass obj3=new ConnectionClass();
+                String q1="insert into appointement(app_id,p_username,name, email, fname, phone, material_status, city, gender, blood, age, dob, deceased, doctor_username, appointement_date, appointement_time, appointement_status) values('"+app_id+"','"+username+"','"+name+"','"+email+"','"+fname+"','"+phone+"','"+mstatus+"','"+city+"','"+gender+"','"+blood+"','"+age+"','"+dob+"','"+deceased+"','"+doctor+"','"+app_date+"','"+app_time+"','"+app_status+"')";
+                int aa=obj3.stm.executeUpdate(q1);
+                if(aa==1)
+                {
+                    JOptionPane.showMessageDialog(null, "your appointement Successfully Booked");
+                    this.setVisible(false);
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(null, "Please!, Fill all details carefully");
+                }
+            }
+            catch(Exception ee)
+            {
+                ee.printStackTrace();
+            }
+        }
+        if(e.getSource()==bt2)
+        {
+            this.setVisible(false);
+        }        
+    }
+    public static void main(String[] args) 
+    {
+//        new AddAppointment().setVisible(true);
+    }
+}
+
+
+
+
+
+AddDoctor.java
+
+
+
+package Hms;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.sql.*;
+import java.util.Random;
+
+public class Add_Doctor implements ActionListener
+{
+    JLabel id,id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id13,id14,id15;
+    JFrame f;
+    JTextField t1,t2,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14;
+    JPasswordField t3;    
+    JButton b,b1;
+    
+    Add_Doctor()
+    {
+        f=new JFrame("Add Doctor");
+        f.setBackground(Color.WHITE);
+        f.setLayout(null);
+        
+        id=new JLabel();
+        id.setBounds(0,0,900,600);
+        id.setLayout(null);
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("Hms/Icons/Add Doctor.jpg"));
+        Image i1=img.getImage().getScaledInstance(900,600,Image.SCALE_SMOOTH);
+        ImageIcon img1=new ImageIcon(i1);
+        id.setIcon(img1);
+        
+        id1=new JLabel("Add Doctor Details");
+        id1.setBounds(280,30,500,50);
+        id1.setFont(new Font("Airal",Font.BOLD,30));
+        id1.setForeground(Color.black);
+        id.add(id1);
+        f.add(id);
+        
+        id2=new JLabel("Name");
+        id2.setBounds(50,150,150,30);
+        id2.setFont(new Font("Arial",Font.BOLD,20));
+        id2.setForeground(Color.BLACK);
+        id.add(id2);
+        
+        t1=new JTextField();
+        t1.setBounds(200,150,150,30);
+        id.add(t1);
+        
+        id3 = new JLabel("Username");
+        id3.setBounds(450,150,200,30);
+        id3.setFont(new Font("Airal",Font.BOLD,20));
+        id3.setForeground(Color.BLACK);
+        id.add(id3);
+
+        t2=new JTextField();
+        t2.setBounds(600,150,150,30);
+        id.add(t2);
+        
+        id4= new JLabel("Password");
+        id4.setBounds(50,200,100,30);
+        id4.setFont(new Font("Airal",Font.BOLD,20));
+        id4.setForeground(Color.BLACK);
+        id.add(id4);
+
+        t3=new JPasswordField();
+        t3.setBounds(200,200,150,30);
+        id.add(t3);
+        
+        id5= new JLabel("Date Of Birth");  
+        id5.setBounds(450,200,200,30);
+        id5.setFont(new Font("Airal",Font.BOLD,20));
+        id5.setForeground(Color.BLACK);
+        id.add(id5);
+
+        t4=new JTextField();
+        t4.setBounds(600,200,150,30);
+        id.add(t4);
+        
+        id6= new JLabel("Address");
+        id6.setBounds(50,250,100,30);
+        id6.setFont(new Font("Airal",Font.BOLD,20));
+        id6.setForeground(Color.BLACK);
+        id.add(id6);
+
+        t5=new JTextField();
+        t5.setBounds(200,250,150,30);
+        id.add(t5);
+
+        id7= new JLabel("Phone");
+        id7.setBounds(450,250,100,30);
+        id7.setFont(new Font("Airal",Font.BOLD,20));
+        id7.setForeground(Color.BLACK);
+        id.add(id7);
+
+        t6=new JTextField();
+        t6.setBounds(600,250,150,30);
+        id.add(t6);
+        
+        id8= new JLabel("Email Id");
+        id8.setBounds(50,300,100,30);
+        id8.setFont(new Font("Airal",Font.BOLD,20));
+        id8.setForeground(Color.BLACK);
+        id.add(id8);
+
+        t7=new JTextField();
+        t7.setBounds(200,300,150,30);
+        id.add(t7);
+        
+        id9= new JLabel("City");
+        id9.setBounds(450,300,100,30);
+        id9.setFont(new Font("Arial",Font.BOLD,20)); 
+        id9.setForeground(Color.BLACK);
+        id.add(id9);
+
+        t8=new JTextField();
+        t8.setBounds(600,300,150,30);
+        id.add(t8);
+        
+        id10= new JLabel("Gender");
+        id10.setBounds(50,350,100,30);
+        id10.setFont(new Font("Arial",Font.BOLD,20));
+        id10.setForeground(Color.BLACK);
+        id.add(id10);
+
+        t9=new JTextField();
+        t9.setBounds(200,350,150,30);
+        id.add(t9);
+        
+        id11= new JLabel("Blood Group");
+        id11.setBounds(450,350,140,30);
+        id11.setFont(new Font("Arial",Font.BOLD,20));
+        id11.setForeground(Color.BLACK);
+        id.add(id11);
+
+        t10=new JTextField();
+        t10.setBounds(600,350,150,30);
+        id.add(t10);
+        
+        id12= new JLabel("Age");
+        id12.setBounds(450,400,100,30);
+        id12.setFont(new Font("Arial",Font.BOLD,20));
+        id12.setForeground(Color.BLACK);
+        id.add(id12);
+
+        t11=new JTextField();
+        t11.setBounds(600,400,150,30);
+        id.add(t11);
+        
+        id13= new JLabel("Clinic Number");
+        id13.setBounds(450,450,150,30);
+        id13.setFont(new Font("Arial",Font.BOLD,20));
+        id13.setForeground(Color.BLACK);
+        id.add(id13);
+
+        t12=new JTextField();
+        t12.setBounds(600,450,150,30);
+        id.add(t12);
+        
+        id14= new JLabel("Joining Date");
+        id14.setBounds(50,400,120,30);
+        id14.setFont(new Font("Arial",Font.BOLD,20));
+        id14.setForeground(Color.BLACK);
+        id.add(id14);
+
+        t13=new JTextField();
+        t13.setBounds(200,400,150,30);
+        id.add(t13);
+        
+        id15= new JLabel("Spcialization");
+        id15.setBounds(50,450,140,30);
+        id15.setFont(new Font("Arial",Font.BOLD,20));
+        id15.setForeground(Color.BLACK);
+        id.add(id15);
+
+        t14=new JTextField();
+        t14.setBounds(200,450,150,30);
+        id.add(t14);
+        
+        b = new JButton("Submit");
+        b.setBackground(Color.BLACK);
+        b.setForeground(Color.WHITE);
+        b.setBounds(250,500,150,40);
+        
+        id.add(b);
+
+        b1=new JButton("Cancel");   
+        b1.setBackground(Color.RED);
+        b1.setForeground(Color.WHITE);
+        b1.setBounds(450,500,150,40);
+        
+        id.add(b1);
+        
+        b.addActionListener(this);
+        b1.addActionListener(this);
+        
+        f.setVisible(true);
+        f.setSize(900,600);
+        f.setLocation(300,100);
+    }
+    public void actionPerformed(ActionEvent e)
+    {
+        String name=t1.getText();
+        String username = t2.getText();
+        String password = t3.getText();
+        String dob = t4.getText();
+        String address = t5.getText();
+        String phone = t6.getText();
+        String email = t7.getText();
+        String city = t8.getText();
+        String gender = t9.getText();
+        String blood = t10.getText();
+        String age = t11.getText();
+        String clinic = t12.getText();
+        String jod = t13.getText();
+        String splz = t14.getText();
+        String avl="Yes";
+        Random r = new Random();
+        String doc_id=""+Math.abs(r.nextInt() % 100000);
+        
+        if(e.getSource()==b)
+        {
+            try
+            {
+                ConnectionClass obj = new ConnectionClass();
+                String q = "insert into doctor values('"+doc_id+"','"+name+"','"+username+"','"+password+"','"+dob+"','"+address+"','"+phone+"','"+email+"','"+city+"','"+gender+"','"+blood+"','"+age+"','"+clinic+"','"+jod+"','"+splz+"','"+avl+"')";
+                obj.stm.executeUpdate(q);
+                JOptionPane.showMessageDialog(null,"Details Successfully Inserted");
+                f.setVisible(false);
+            }
+            catch(Exception ex)
+            {
+                System.out.println("The error is:"+ex);
+            }
+        }
+        if(e.getSource()==b1)
+        {
+            f.setVisible(false);
+        }
+    }
+    public static void main(String[] args) 
+    {
+        new Add_Doctor();
+    }
+}
+
+
+
+AddPatient.java
+
+
+package Hms;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.sql.*;
+import java.util.Random;
+
+public class Add_Patient implements ActionListener
+{
+    JLabel id,id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id13,id14,id15;
+    JFrame f;
+    JTextField t1,t2,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14;
+    JPasswordField t3;    
+    JButton b,b1;
+    
+    Add_Patient()
+    {
+        f=new JFrame("Add Patient");
+        f.setBackground(Color.WHITE);
+        f.setLayout(null);
+        
+        id=new JLabel();
+        id.setBounds(0,0,900,600);
+        id.setLayout(null);
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("Hms/Icons/Add Patient.jpg"));
+        Image i1=img.getImage().getScaledInstance(900,600,Image.SCALE_SMOOTH);
+        ImageIcon img1=new ImageIcon(i1);
+        id.setIcon(img1);
+        
+        id1=new JLabel("Add Patient Details");
+        id1.setBounds(280,30,500,50);
+        id1.setFont(new Font("Airal",Font.BOLD,30));
+        id1.setForeground(Color.black);
+        id.add(id1);
+        f.add(id);
+        
+        id2=new JLabel("Name");
+        id2.setBounds(50,150,150,30);
+        id2.setFont(new Font("Arial",Font.BOLD,20));
+        id2.setForeground(Color.BLACK);
+        id.add(id2);
+        
+        t1=new JTextField();
+        t1.setBounds(200,150,150,30);
+        id.add(t1);
+        
+        id3 = new JLabel("Username");
+        id3.setBounds(450,150,200,30);
+        id3.setFont(new Font("Airal",Font.BOLD,20));
+        id3.setForeground(Color.BLACK);
+        id.add(id3);
+
+        t2=new JTextField();
+        t2.setBounds(600,150,150,30);
+        id.add(t2);
+        
+        id4= new JLabel("Password");
+        id4.setBounds(50,200,100,30);
+        id4.setFont(new Font("Airal",Font.BOLD,20));
+        id4.setForeground(Color.BLACK);
+        id.add(id4);
+
+        t3=new JPasswordField();
+        t3.setBounds(200,200,150,30);
+        id.add(t3);
+        
+        id5= new JLabel("Email");  
+        id5.setBounds(450,200,200,30);
+        id5.setFont(new Font("Airal",Font.BOLD,20));
+        id5.setForeground(Color.BLACK);
+        id.add(id5);
+
+        t4=new JTextField();
+        t4.setBounds(600,200,150,30);
+        id.add(t4);
+        
+        id6= new JLabel("Father Name");
+        id6.setBounds(50,250,140,30);
+        id6.setFont(new Font("Airal",Font.BOLD,20));
+        id6.setForeground(Color.BLACK);
+        id.add(id6);
+
+        t5=new JTextField();
+        t5.setBounds(200,250,150,30);
+        id.add(t5);
+
+        id7= new JLabel("Phone");
+        id7.setBounds(450,250,100,30);
+        id7.setFont(new Font("Airal",Font.BOLD,20));
+        id7.setForeground(Color.BLACK);
+        id.add(id7);
+
+        t6=new JTextField();
+        t6.setBounds(600,250,150,30);
+        id.add(t6);
+        
+        id8= new JLabel("Material Status");
+        id8.setBounds(50,300,160,30);
+        id8.setFont(new Font("Airal",Font.BOLD,20));
+        id8.setForeground(Color.BLACK);
+        id.add(id8);
+
+        t7=new JTextField();
+        t7.setBounds(200,300,150,30);
+        id.add(t7);
+        
+        id9= new JLabel("City");
+        id9.setBounds(450,300,100,30);
+        id9.setFont(new Font("Arial",Font.BOLD,20)); 
+        id9.setForeground(Color.BLACK);
+        id.add(id9);
+
+        t8=new JTextField();
+        t8.setBounds(600,300,150,30);
+        id.add(t8);
+        
+        id10= new JLabel("Gender");
+        id10.setBounds(50,350,100,30);
+        id10.setFont(new Font("Arial",Font.BOLD,20));
+        id10.setForeground(Color.BLACK);
+        id.add(id10);
+
+        t9=new JTextField();
+        t9.setBounds(200,350,150,30);
+        id.add(t9);
+        
+        id11= new JLabel("Blood Group");
+        id11.setBounds(450,350,140,30);
+        id11.setFont(new Font("Arial",Font.BOLD,20));
+        id11.setForeground(Color.BLACK);
+        id.add(id11);
+
+        t10=new JTextField();
+        t10.setBounds(600,350,150,30);
+        id.add(t10);
+        
+        id12= new JLabel("Age");
+        id12.setBounds(450,400,100,30);
+        id12.setFont(new Font("Arial",Font.BOLD,20));
+        id12.setForeground(Color.BLACK);
+        id.add(id12);
+
+        t11=new JTextField();
+        t11.setBounds(600,400,150,30);
+        id.add(t11);
+        
+        id13= new JLabel("Date of Birth");
+        id13.setBounds(450,450,150,30);
+        id13.setFont(new Font("Arial",Font.BOLD,20));
+        id13.setForeground(Color.BLACK);
+        id.add(id13);
+
+        t12=new JTextField();
+        t12.setBounds(600,450,150,30);
+        id.add(t12);
+        
+        id14= new JLabel("Deceased");
+        id14.setBounds(50,400,120,30);
+        id14.setFont(new Font("Arial",Font.BOLD,20));
+        id14.setForeground(Color.BLACK);
+        id.add(id14);
+
+        t13=new JTextField();
+        t13.setBounds(200,400,150,30);
+        id.add(t13);
+        
+        id15= new JLabel("Address");
+        id15.setBounds(50,450,140,30);
+        id15.setFont(new Font("Arial",Font.BOLD,20));
+        id15.setForeground(Color.BLACK);
+        id.add(id15);
+
+        t14=new JTextField();
+        t14.setBounds(200,450,150,30);
+        id.add(t14);
+        
+        b = new JButton("Submit");
+        b.setBackground(Color.BLACK);
+        b.setForeground(Color.WHITE);
+        b.setBounds(250,500,150,40);
+        
+        id.add(b);
+
+        b1=new JButton("Cancel");   
+        b1.setBackground(Color.RED);
+        b1.setForeground(Color.WHITE);
+        b1.setBounds(450,500,150,40);
+        
+        id.add(b1);
+        
+        b.addActionListener(this);
+        b1.addActionListener(this);
+        
+        f.setVisible(true);
+        f.setSize(840,600);
+        f.setLocation(300,100);
+    }
+    public void actionPerformed(ActionEvent e)
+    {
+        String name=t1.getText();
+        String username = t2.getText();
+        String password = t3.getText();
+        String email = t4.getText();
+        String father_name = t5.getText();
+        String phone = t6.getText();
+        String material_status = t7.getText();
+        String city = t8.getText();
+        String gender = t9.getText();
+        String blood = t10.getText();
+        String age = t11.getText();
+        String dob = t12.getText();
+        String deceased = t13.getText();
+        String address = t14.getText();
+        Random r = new Random();
+        String pat_id=""+Math.abs(r.nextInt() % 100000);
+        
+        if(e.getSource()==b)
+        {
+            try
+            {
+                ConnectionClass obj = new ConnectionClass();
+                String q = "insert into patient values('"+pat_id+"','"+name+"','"+username+"','"+password+"','"+email+"','"+father_name+"','"+phone+"','"+material_status+"','"+city+"','"+gender+"','"+blood+"','"+age+"','"+dob+"','"+deceased+"','"+address+"')";
+                obj.stm.executeUpdate(q);
+                JOptionPane.showMessageDialog(null,"Details Successfully Inserted");
+                f.setVisible(false);
+            }
+            catch(Exception ex)
+            {
+                System.out.println("The error is:"+ex);
+            }
+        }
+        if(e.getSource()==b1)
+        {
+            f.setVisible(false);
+        }
+    }
+    public static void main(String[] args) 
+    {
+        new Add_Patient();
+    }
+}
+
+
+
+AddReceiptionist.java
+
+
+
+
+package Hms;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+import java.sql.*;
+import java.util.Random;
+
+public class Add_Receptionist implements ActionListener
+{
+    JLabel id,id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id13,id14,id15;
+    JFrame f;
+    JTextField t1,t2,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14;
+    JPasswordField t3;    
+    JButton b,b1;
+    
+    Add_Receptionist()
+    {
+        f=new JFrame("Add Receptionist");
+        f.setBackground(Color.WHITE);
+        f.setLayout(null);
+        
+        id=new JLabel();
+        id.setBounds(0,0,840,600);
+        id.setLayout(null);
+        ImageIcon img=new ImageIcon(ClassLoader.getSystemResource("Hms/Icons/Add Receptionist.jpg"));
+        Image i1=img.getImage().getScaledInstance(840,600,Image.SCALE_SMOOTH);
+        ImageIcon img1=new ImageIcon(i1);
+        id.setIcon(img1);
+        
+        id1=new JLabel("Add Receptionist Details");
+        id1.setBounds(280,30,500,50);
+        id1.setFont(new Font("Airal",Font.BOLD,30));
+        id1.setForeground(Color.black);
+        id.add(id1);
+        f.add(id);
+        
+        id2=new JLabel("Name");
+        id2.setBounds(50,150,150,30);
+        id2.setFont(new Font("Arial",Font.BOLD,20));
+        id2.setForeground(Color.BLACK);
+        id.add(id2);
+        
+        t1=new JTextField();
+        t1.setBounds(200,150,150,30);
+        id.add(t1);
+        
+        id3 = new JLabel("Username");
+        id3.setBounds(450,150,200,30);
+        id3.setFont(new Font("Airal",Font.BOLD,20));
+        id3.setForeground(Color.BLACK);
+        id.add(id3);
+
+        t2=new JTextField();
+        t2.setBounds(600,150,150,30);
+        id.add(t2);
+        
+        id4= new JLabel("Password");
+        id4.setBounds(50,200,100,30);
+        id4.setFont(new Font("Airal",Font.BOLD,20));
+        id4.setForeground(Color.BLACK);
+        id.add(id4);
+
+        t3=new JPasswordField();
+        t3.setBounds(200,200,150,30);
+        id.add(t3);
+        
+        id5= new JLabel("Email");  
+        id5.setBounds(450,200,200,30);
+        id5.setFont(new Font("Airal",Font.BOLD,20));
+        id5.setForeground(Color.BLACK);
+        id.add(id5);
+
+        t4=new JTextField();
+        t4.setBounds(600,200,150,30);
+        id.add(t4);
+        
+        id6= new JLabel("Father Name");
+        id6.setBounds(50,250,140,30);
+        id6.setFont(new Font("Airal",Font.BOLD,20));
+        id6.setForeground(Color.BLACK);
+        id.add(id6);
+
+        t5=new JTextField();
+        t5.setBounds(200,250,150,30);
+        id.add(t5);
+
+        id7= new JLabel("Phone");
+        id7.setBounds(450,250,100,30);
+        id7.setFont(new Font("Airal",Font.BOLD,20));
+        id7.setForeground(Color.BLACK);
+        id.add(id7);
+
+        t6=new JTextField();
+        t6.setBounds(600,250,150,30);
+        id.add(t6);
+        
+        id8= new JLabel("Qualification");
+        id8.setBounds(50,300,160,30);
+        id8.setFont(new Font("Airal",Font.BOLD,20));
+        id8.setForeground(Color.BLACK);
+        id.add(id8);
+
+        t7=new JTextField();
+        t7.setBounds(200,300,150,30);
+        id.add(t7);
+        
+        id9= new JLabel("City");
+        id9.setBounds(450,300,100,30);
+        id9.setFont(new Font("Arial",Font.BOLD,20)); 
+        id9.setForeground(Color.BLACK);
+        id.add(id9);
+
+        t8=new JTextField();
+        t8.setBounds(600,300,150,30);
+        id.add(t8);
+        
+        id10= new JLabel("Gender");
+        id10.setBounds(50,350,100,30);
+        id10.setFont(new Font("Arial",Font.BOLD,20));
+        id10.setForeground(Color.BLACK);
+        id.add(id10);
+
+        t9=new JTextField();
+        t9.setBounds(200,350,150,30);
+        id.add(t9);
+        
+        id11= new JLabel("Blood Group");
+        id11.setBounds(450,350,140,30);
+        id11.setFont(new Font("Arial",Font.BOLD,20));
+        id11.setForeground(Color.BLACK);
+        id.add(id11);
+
+        t10=new JTextField();
+        t10.setBounds(600,350,150,30);
+        id.add(t10);
+        
+        id12= new JLabel("Age");
+        id12.setBounds(450,400,100,30);
+        id12.setFont(new Font("Arial",Font.BOLD,20));
+        id12.setForeground(Color.BLACK);
+        id.add(id12);
+
+        t11=new JTextField();
+        t11.setBounds(600,400,150,30);
+        id.add(t11);
+        
+        id13= new JLabel("Date of Birth");
+        id13.setBounds(450,450,150,30);
+        id13.setFont(new Font("Arial",Font.BOLD,20));
+        id13.setForeground(Color.BLACK);
+        id.add(id13);
+
+        t12=new JTextField();
+        t12.setBounds(600,450,150,30);
+        id.add(t12);
+        
+        id14= new JLabel("Joining Date");
+        id14.setBounds(50,400,120,30);
+        id14.setFont(new Font("Arial",Font.BOLD,20));
+        id14.setForeground(Color.BLACK);
+        id.add(id14);
+
+        t13=new JTextField();
+        t13.setBounds(200,400,150,30);
+        id.add(t13);
+        
+        id15= new JLabel("Address");
+        id15.setBounds(50,450,140,30);
+        id15.setFont(new Font("Arial",Font.BOLD,20));
+        id15.setForeground(Color.BLACK);
+        id.add(id15);
+
+        t14=new JTextField();
+        t14.setBounds(200,450,150,30);
+        id.add(t14);
+        
+        b = new JButton("Submit");
+        b.setBackground(Color.BLACK);
+        b.setForeground(Color.WHITE);
+        b.setBounds(250,500,150,40);
+        
+        id.add(b);
+
+        b1=new JButton("Cancel");   
+        b1.setBackground(Color.RED);
+        b1.setForeground(Color.WHITE);
+        b1.setBounds(450,500,150,40);
+        
+        id.add(b1);
+        
+        b.addActionListener(this);
+        b1.addActionListener(this);
+        
+        f.setVisible(true);
+        f.setSize(840,600);
+        f.setLocation(300,100);
+    }
+    public void actionPerformed(ActionEvent e)
+    {
+        String name=t1.getText();
+        String username = t2.getText();
+        String password = t3.getText();
+        String email = t4.getText();
+        String father_name = t5.getText();
+        String phone = t6.getText();
+        String qualification = t7.getText();
+        String city = t8.getText();
+        String gender = t9.getText();
+        String blood = t10.getText();
+        String age = t11.getText();
+        String dob = t12.getText();
+        String joining = t13.getText();
+        String address = t14.getText();
+        Random r = new Random();
+        String res_id=""+Math.abs(r.nextInt() % 100000);
+        
+        if(e.getSource()==b)
+        {
+            try
+            {
+                ConnectionClass obj = new ConnectionClass();
+                String q = "insert into receptionist values('"+res_id+"','"+name+"','"+username+"','"+password+"','"+email+"','"+father_name+"','"+phone+"','"+qualification+"','"+city+"','"+gender+"','"+blood+"','"+age+"','"+dob+"','"+joining+"','"+address+"')";
+                obj.stm.executeUpdate(q);
+                JOptionPane.showMessageDialog(null,"Details Successfully Inserted");
+                f.setVisible(false);
+            }
+            catch(Exception ex)
+            {
+                System.out.println("The error is:"+ex);
+            }
+        }
+        if(e.getSource()==b1)
+        {
+            f.setVisible(false);
+        }
+    }
+    public static void main(String[] args) 
+    {
+        new Add_Receptionist();
+    }
+}
+
+
+
+
+
+DoctorHomePage.java
+
+
+
+
+
+package Hms;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class DoctorHomePage extends JFrame implements ActionListener
+{
+    JLabel l1;
+    Font f,f1,f2;
+    public String id;
+    public int login__id;
+    String doctor_username;
+    
+    DoctorHomePage(String doctorname, String doctorid, int login_id, String doctorusername)
+    {
+        super("Doctor Home Page");
+        setLocation(0,0);
+        setSize(1350,700);
+        
+        id=doctorid;
+        login__id=login_id;
+        doctor_username=doctorusername;
+        
+        f=new Font("Lucida Fax",Font.BOLD,20);
+        f2=new Font("Gadugi",Font.BOLD,35);
+        f1=new Font("MS UI Gothic",Font.BOLD,18);
+        
+        ImageIcon ic=new ImageIcon(ClassLoader.getSystemResource("Hms/Icons/home 2.jpg"));
+        Image img=ic.getImage().getScaledInstance(1350,700,Image.SCALE_SMOOTH);
+        ImageIcon ic1=new ImageIcon(img);
+        l1=new JLabel(ic1);
+        
+        JMenuBar m1=new JMenuBar();
+        JMenu men1=new JMenu("Doctor");
+//        JMenuItem ment1=new JMenuItem("Add Doctor");
+        JMenuItem ment2=new JMenuItem("View Doctor");
+        
+        JMenu men2=new JMenu("Patient");
+//        JMenuItem ment3=new JMenuItem("Add Patient");
+        JMenuItem ment4=new JMenuItem("View Patient");
+        
+        JMenu men3=new JMenu("Receptionist");
+//        JMenuItem ment5=new JMenuItem("Add Receptionist");
+        JMenuItem ment6=new JMenuItem("View Receptionist");
+        
+        JMenu men4=new JMenu("Appointment");
+//        JMenuItem ment7=new JMenuItem("Add Appointment");
+        JMenuItem ment8=new JMenuItem("View Appointment");
+        
+        JMenu men5=new JMenu("Hello, Doctor ("+doctorname+")");
+        JMenuItem ment9=new JMenuItem("My Profile");
+        JMenuItem ment10=new JMenuItem("Change Password");
+        
+        JMenu men8=new JMenu("Exit");
+        JMenuItem ment14=new JMenuItem("Exit");
+        
+//        men1.add(ment1);
+        men1.add(ment2);
+//        men2.add(ment3);
+        men2.add(ment4);
+//        men3.add(ment5);
+        men3.add(ment6);
+//        men4.add(ment7);
+        men4.add(ment8);
+        men5.add(ment9);        
+        men5.add(ment10);
+        men8.add(ment14);
+        
+        m1.add(men1);
+        m1.add(men2);
+        m1.add(men3);
+        m1.add(men4);
+        m1.add(men5);
+        m1.add(men8);
+        
+        men1.setFont(f);
+        men2.setFont(f);
+        men3.setFont(f);
+        men4.setFont(f);
+        men5.setFont(f);
+        men8.setFont(f);
+        
+//        ment1.setFont(f1);
+        ment2.setFont(f1);
+//        ment3.setFont(f1);
+        ment4.setFont(f1);
+//        ment5.setFont(f1);
+        ment6.setFont(f1);
+//        ment7.setFont(f1);
+        ment8.setFont(f1);
+        ment9.setFont(f1);
+        ment10.setFont(f1);
+        ment14.setFont(f1);
+        
+        m1.setBackground(Color.BLACK);
+        
+        men1.setForeground(Color.GRAY);
+        men2.setForeground(Color.GRAY);
+        men3.setForeground(Color.GRAY);
+        men4.setForeground(Color.GRAY);
+        men5.setForeground(Color.GRAY);
+        men8.setForeground(Color.RED);
+        
+//        ment1.setBackground(Color.BLACK);        
+//        ment3.setBackground(Color.BLACK);          
+//        ment5.setBackground(Color.BLACK);
+//        ment7.setBackground(Color.BLACK);
+        ment9.setBackground(Color.BLACK);
+        ment14.setBackground(Color.BLACK);
+
+//        ment1.setForeground(Color.YELLOW);       
+//        ment3.setForeground(Color.YELLOW);       
+//        ment5.setForeground(Color.YELLOW);        
+//        ment7.setForeground(Color.YELLOW);        
+        ment9.setForeground(Color.YELLOW);
+        ment14.setForeground(Color.RED);
+        
+//        ment1.addActionListener(this);
+        ment2.addActionListener(this);
+//        ment3.addActionListener(this);
+        ment4.addActionListener(this);
+//        ment5.addActionListener(this);
+        ment6.addActionListener(this);
+//        ment7.addActionListener(this);
+        ment8.addActionListener(this);
+        ment9.addActionListener(this);
+        ment10.addActionListener(this);
+        ment14.addActionListener(this);
+        
+        setJMenuBar(m1);
+        add(l1);
+    }
+    public void actionPerformed(ActionEvent e) 
+    {
+        String comnd=e.getActionCommand();
+        if(comnd.equals("Add Doctor"))
+        {
+            new Add_Doctor();
+        }
+        else if(comnd.equals("View Doctor"))
+        {
+            new View_Doctor(login__id).setVisible(true);
+        }
+        else if(comnd.equals("Add Patient"))
+        {
+            new Add_Patient();
+        }
+        else if(comnd.equals("View Patient"))
+        {
+            new View_Patient("xyz",login__id).setVisible(true);
+        }
+        else if(comnd.equals("Add Receptionist"))
+        {
+            new Add_Receptionist();
+        }
+        else if(comnd.equals("View Receptionist"))
+        {
+            new View_Receptionist(login__id).setVisible(true);
+        }
+        else if(comnd.equals("Add Appointment"))
+        {
+            new AddAppointment("xyz",login__id).setVisible(true);
+        }
+        else if(comnd.equals("View Appointment"))
+        {
+            new View_Appointement(doctor_username,login__id).setVisible(true);
+        }
+        else if(comnd.equals("My Profile"))
+        {
+            new CheckMyProfile(id,login__id).setVisible(true);
+        }
+        else if(comnd.equals("Change Password"))
+        {
+            new ChangePassword(id,login__id).setVisible(true);
+        }
+        else if(comnd.equals("Exit"))
+        {
+            this.setVisible(false);
+            new Index();
+        }
+    }
+}
+
+
+
+
+PatientHomePage.java
+
+
+
+package Hms;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class PatientHomePage extends JFrame implements ActionListener
+{
+    JLabel l1;
+    Font f,f1,f2;
+    public String id;
+    public int login__id;
+    String patient_username;
+    
+    PatientHomePage(String patientname, String patientid, int login_id, String patientusername)
+    {
+        super("Patient Home Page");
+        setLocation(0,0);
+        setSize(1350,700);
+        
+        id=patientid;
+        login__id=login_id;
+        patient_username=patientusername;
+        
+        f=new Font("Lucida Fax",Font.BOLD,20);
+        f2=new Font("Gadugi",Font.BOLD,35);
+        f1=new Font("MS UI Gothic",Font.BOLD,18);
+        
+        ImageIcon ic=new ImageIcon(ClassLoader.getSystemResource("Hms/Icons/patient.jpg"));
+        Image img=ic.getImage().getScaledInstance(1350,700,Image.SCALE_SMOOTH);
+        ImageIcon ic1=new ImageIcon(img);
+        l1=new JLabel(ic1);
+        
+        JMenuBar m1=new JMenuBar();
+        JMenu men1=new JMenu("Doctor");
+//        JMenuItem ment1=new JMenuItem("Add Doctor");
+        JMenuItem ment2=new JMenuItem("View Doctor");
+        
+        JMenu men2=new JMenu("Patient");
+//        JMenuItem ment3=new JMenuItem("Add Patient");
+        JMenuItem ment4=new JMenuItem("View Patient");
+        
+        JMenu men3=new JMenu("Receptionist");
+//        JMenuItem ment5=new JMenuItem("Add Receptionist");
+        JMenuItem ment6=new JMenuItem("View Receptionist");
+        
+        JMenu men4=new JMenu("Appointment");
+        JMenuItem ment7=new JMenuItem("Add Appointment");
+        JMenuItem ment8=new JMenuItem("View Appointment");
+        
+        JMenu men5=new JMenu("Hello, ("+patientname+")");
+        JMenuItem ment9=new JMenuItem("My Profile");
+        JMenuItem ment10=new JMenuItem("Change Password");
+        
+        JMenu men8=new JMenu("Exit");
+        JMenuItem ment14=new JMenuItem("Exit");
+        
+//        men1.add(ment1);
+        men1.add(ment2);
+//        men2.add(ment3);
+        men2.add(ment4);
+//        men3.add(ment5);
+        men3.add(ment6);
+        men4.add(ment7);
+        men4.add(ment8);
+        men5.add(ment9);        
+        men5.add(ment10);
+        men8.add(ment14);
+        
+        m1.add(men1);
+        m1.add(men2);
+        m1.add(men3);
+        m1.add(men4);
+        m1.add(men5);
+        m1.add(men8);
+        
+        men1.setFont(f);
+        men2.setFont(f);
+        men3.setFont(f);
+        men4.setFont(f);
+        men5.setFont(f);
+        men8.setFont(f);
+        
+//        ment1.setFont(f1);
+        ment2.setFont(f1);
+//        ment3.setFont(f1);
+        ment4.setFont(f1);
+//        ment5.setFont(f1);
+        ment6.setFont(f1);
+        ment7.setFont(f1);
+        ment8.setFont(f1);
+        ment9.setFont(f1);
+        ment10.setFont(f1);
+        ment14.setFont(f1);
+        
+        m1.setBackground(Color.BLACK);
+        
+        men1.setForeground(Color.GRAY);
+        men2.setForeground(Color.GRAY);
+        men3.setForeground(Color.GRAY);
+        men4.setForeground(Color.GRAY);
+        men5.setForeground(Color.GRAY);
+        men8.setForeground(Color.RED);
+        
+//        ment1.setBackground(Color.BLACK);        
+//        ment3.setBackground(Color.BLACK);          
+//        ment5.setBackground(Color.BLACK);
+        ment7.setBackground(Color.BLACK);
+        ment9.setBackground(Color.BLACK);
+        ment14.setBackground(Color.BLACK);
+
+//        ment1.setForeground(Color.YELLOW);       
+//        ment3.setForeground(Color.YELLOW);       
+//        ment5.setForeground(Color.YELLOW);        
+        ment7.setForeground(Color.YELLOW);        
+        ment9.setForeground(Color.YELLOW);
+        ment14.setForeground(Color.RED);
+        
+//        ment1.addActionListener(this);
+        ment2.addActionListener(this);
+//        ment3.addActionListener(this);
+        ment4.addActionListener(this);
+//        ment5.addActionListener(this);
+        ment6.addActionListener(this);
+        ment7.addActionListener(this);
+        ment8.addActionListener(this);
+        ment9.addActionListener(this);
+        ment10.addActionListener(this);
+        ment14.addActionListener(this);
+        
+        setJMenuBar(m1);
+        add(l1);
+    }
+    public void actionPerformed(ActionEvent e) 
+    {
+        String comnd=e.getActionCommand();
+        if(comnd.equals("Add Doctor"))
+        {
+            new Add_Doctor();
+        }
+        else if(comnd.equals("View Doctor"))
+        {
+            new View_Doctor(login__id).setVisible(true);
+        }
+        else if(comnd.equals("Add Patient"))
+        {
+            new Add_Patient();
+        }
+        else if(comnd.equals("View Patient"))
+        {
+            new View_Patient(patient_username,login__id).setVisible(true);
+        }
+        else if(comnd.equals("Add Receptionist"))
+        {
+            new Add_Receptionist();
+        }
+        else if(comnd.equals("View Receptionist"))
+        {
+            new View_Receptionist(login__id).setVisible(true);
+        }
+        else if(comnd.equals("Add Appointment"))
+        {
+            new AddAppointment(patient_username,login__id).setVisible(true);
+        }
+        else if(comnd.equals("View Appointment"))
+        {
+            new View_Appointement(patient_username,login__id).setVisible(true);
+        }
+        else if(comnd.equals("My Profile"))
+        {
+            new CheckMyProfile(id,login__id).setVisible(true);
+        }
+        else if(comnd.equals("Change Password"))
+        {
+            new ChangePassword(id,login__id).setVisible(true);
+        }
+        else if(comnd.equals("Exit"))
+        {
+            this.setVisible(false);
+            new Index();
+        }
+    }
+}
+
+
