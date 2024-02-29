@@ -1,0 +1,19 @@
+.movie__list {
+    padding: 0 3rem 3rem 3rem;
+    background-color: black;
+}
+
+.list__title {
+font-size: 1.75rem;
+margin:  1.5rem;
+}
+
+.list__cards {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: flex-start;
+    margin: 3.5rem;
+   
+   
+    
+}

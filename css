@@ -1,0 +1,24 @@
+
+import './App.css';
+import { BrowserRouter as Router ,Route,Routes} from "react-router-dom"; 
+import   Header   from './component/header/Header';
+import Home from './pages/home/Home';
+import Movie from './component/movielist/Movie';
+import MovieDetails from './pages/moviedata/MovieDetails';
+function App() {
+  return (
+    <div className="App">
+      <Router>
+      <Header/>
+        <Routes>
+          <Route index element={<Home/>}/>
+          <Route path="movie/:id" element={<MovieDetails/>}/>
+          <Route path="movies/:type" element={<Movie/>}/>
+          <Route path="/*" element={<h1>Error Page</h1>}/>
+                  </Routes>
+                  </Router>
+    </div>
+  );
+}
+
+export default App;
