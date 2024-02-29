@@ -1,0 +1,22 @@
+.containerBack{
+background-image: url(../assets/AddPack.jpg);
+background-size: cover;
+width: 100vw;
+height: 100vh;
+padding: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.about{
+    background-image: url(../assets/About.jpg);
+    background-size: cover;
+}
+.containerAbout{
+    width: 100vw;
+    height: 95vh;
+    
+}
