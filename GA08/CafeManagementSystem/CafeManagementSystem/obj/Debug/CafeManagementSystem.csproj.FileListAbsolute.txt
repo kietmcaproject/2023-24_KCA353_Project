@@ -1,0 +1,16 @@
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\bin\Debug\CafeManagementSystem.exe.config
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\bin\Debug\CafeManagementSystem.exe
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\bin\Debug\CafeManagementSystem.pdb
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.csproj.AssemblyReference.cache
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.Properties.Resources.resources
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.csproj.GenerateResource.cache
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.exe
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.pdb
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.Dashboard.resources
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.Login.resources
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.AllUserControls.uc_welcome.resources
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.AllUserControls.uc_additems.resources
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.AllUserControls.uc_placeorder.resources
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.AllUserControls.uc_updateitems.resources
+C:\Users\akash\source\repos\CafeManagementSystem\CafeManagementSystem\obj\Debug\CafeManagementSystem.AllUserControls.uc_removeitem.resources
