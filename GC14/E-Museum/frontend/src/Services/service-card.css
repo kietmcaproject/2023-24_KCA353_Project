@@ -1,0 +1,33 @@
+.service__item {
+    padding: 1rem;
+    border-bottom: 1px solid rgb(25, 21, 108);
+    border-right: 1px solid rgb(134, 133, 203);
+    border-radius: 0.5rem;
+    }
+
+.service__img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: var(--secondary-color);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 50px;
+}
+    
+.service__img img { 
+    width: 100%;
+}
+
+.service__item h5{ 
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.service__item p{
+    font-size: .9rem;
+    color:var(--secondary-color);
+}

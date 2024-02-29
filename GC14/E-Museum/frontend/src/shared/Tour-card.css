@@ -1,0 +1,110 @@
+.tour__img img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card {
+    border: none !important;
+    box-shadow:  rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+}
+
+.tour__img{
+    position: relative;
+}
+
+.tour__img span{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    z-index: 10;
+    background: var(--primrary-color);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px 0 0 0;
+}
+
+.card__top span i {
+    color: var(--secondary-color); 
+}
+    
+.tour__rating {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.tour__location {
+    color: var(--heading-color);
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.tour__rating i,
+.tour__location i {
+    font-size: 1rem;
+}
+
+.tour__title {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.tour__title a{
+    text-decoration: none;
+    color: var(--heading-color);
+    transition: .3s;
+}
+
+.tour__title a:hover{
+    color: var(--secondary-color);
+}
+
+.card__bottom h5{
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card__bottom h5 span{
+    font-weight: 500;
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+.card__top span i {
+    color: var(--secondary-color); 
+}
+
+.tour__rating {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.tour__location {
+    color: var(--heading-color);
+    font-weight: 500%;
+    font-size: .9rem;
+}
+
+.tour__rating i,
+.tour__location i {
+font-size: 1rem;
+}
+
+.tour__title {
+margin-top: 1rem;
+font-size: 1.1rem;
+cursor: pointer;
+}
+
+.tour__title a{
+    text-decoration: none;
+    color: var(--heading-color);
+    transition: .3s;
+}
+
+.tour__title a:hover{
+    color: var(--secondary-color);
+}
