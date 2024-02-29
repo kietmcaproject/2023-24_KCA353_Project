@@ -1,0 +1,15 @@
+#header {
+height: 50px;
+background-color: black;
+color:aliceblue;
+font-family: 'Noto Serif',serif;
+font-size: large;
+padding: 1vh;
+background-image:url(https://i.pinimg.com/originals/f9/6d/fb/f96dfb9f9d4e0b42af3888de8b9473a7.gif);
+background-size:cover;
+background-position:center;
+background-clip:text;
+-webkit-background-clip:text;
+color:transparent;
+font-weight:1000
+}
