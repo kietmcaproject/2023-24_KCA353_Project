@@ -1,0 +1,43 @@
+{% include 'core/header.html' %}
+{% load static %}
+
+<div id="content-wrapper" class="mt-4" style="padding-top: 1%;">
+     <div class="container-fluid">
+       <div class="card mb-2 col-md-12">
+           
+        <h1>Login Page</h1>
+       </div>
+
+       {% include 'core/footer.html' %}
+     </div>
+</div>
+
+
+
+
+user_id = request.user.id
+        
+        cv_id = Cv.objects.filter(user_id=user_id).values_list('id', flat=True)
+        cv_id = list(cv_id)
+        cv_id = cv_id[0]
+
+
+
+
+
+user_id = request.user.id
+
+        try:
+            cv_id = Cv.objects.filter(user_id=user_id).values_list('id', flat=True)
+            cv_id = list(cv_id)
+            cv_id = cv_id[0]
+        except Exception as e:
+            Cv.objects.create(user_id=user_id)
+
+
+
+
+
+
+
+

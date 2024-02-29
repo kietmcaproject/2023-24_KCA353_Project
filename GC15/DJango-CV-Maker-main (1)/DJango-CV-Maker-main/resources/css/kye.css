@@ -1,0 +1,146 @@
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    height: 100vh;
+
+}
+/*.filter{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+}*/
+
+
+
+.messages{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.card{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    background-color: #e0e0e0;
+
+
+}
+
+
+.login-header{
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #014751;
+    font-size: 18px;
+    color: #fafafa;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px;
+  
+}
+
+
+
+
+
+.container-register{
+    padding-top: 100px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    width: 310px;
+    background-color: #fafafa;
+    box-shadow: 0 6px 8px rgba(0,0,0,.1);
+    border-radius: 8px;
+}
+
+
+
+
+
+.container{
+    padding-top: 70px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    width: 310px;
+    background-color: #fafafa;
+    box-shadow: 0 6px 8px rgba(0,0,0,.1);
+    border-radius: 8px;
+}
+
+
+.container form input{
+    margin-bottom: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #e0e0e0;
+    color: #212121;
+    font-size: 20px;
+    transition: .4s;
+}
+.container form input:focus{
+    border-bottom: 2px solid #2979ff;
+}
+
+.container label{
+    text-align: left;
+    color: #2979ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.container form input::placeholder{
+    color: #dfd1d1;
+}
+.loginbtn{
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #014751;
+    font-size: 18px;
+    color: #fafafa;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor:pointer;
+}
+
+.register-link, .login-link{
+    margin: 10px 0;
+}
+
+
+.registerbtn, .signin-link{
+    width: 30%;
+    padding: 8px 0;
+    border: none;
+    background-color: #014751;
+    font-size: 14px;
+    color: #fafafa;
+    border-radius: 50px;
+    cursor:pointer;  
+}
+
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}

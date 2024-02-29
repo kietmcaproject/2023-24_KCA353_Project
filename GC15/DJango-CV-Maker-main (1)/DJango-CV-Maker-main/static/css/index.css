@@ -1,0 +1,64 @@
+.btn_link{
+    width: 100%;
+    height: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #FFFF00;
+    font-size: 18px;
+    color: #014751;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+#btn_link_space{
+    margin-right: 5px;
+}
+
+.welcome_text{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.footer{
+    background-color: #e0e0e0;
+    color: #014751;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.startBtn{
+    width: 30%;
+    padding: 8px 0;
+    border: none;
+    background-color: #014751;
+    font-size: 18px;
+    color: #FFFF00;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+.loginbtn{
+     width: 100%;
+     padding: 8px 0;
+     border: none;
+     background-color: #014751;
+     font-size: 18px;
+     color: #fafafa;
+     text-transform: uppercase;
+     border-radius: 50px;
+     cursor: pointer;
+}
+
+
+.skill_del_btn{
+    padding-top: 3.5%;
+}
+
+

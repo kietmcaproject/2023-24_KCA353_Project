@@ -1,0 +1,70 @@
+@font-face{
+    font-family: SourceSansPro;
+    src: url(SourceSansPro-Regular.ttf);
+}
+
+
+
+.cv_header{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+
+.basic-info p{
+    color: #0087c3;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.basic-info h1{
+    margin: 0;
+    padding-top: 5%;
+
+}
+
+
+body{
+    position: relative;
+    width: 21cm;
+    height: 100%;
+    margin: 0 auto;
+    color: #555555;
+    background-color: #FFFFFF;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    font-family: SourceSansPro;
+}
+
+
+.bio{
+    margin: 0;
+    color: #0087c3;
+    font-size: 1.5em;
+}
+
+
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     border-spacing: 0;
+     margin-bottom: 35px;
+ }
+
+ table th{
+     padding: 20px;
+     background: #EEEEEE;
+     text-align: left;
+     border-bottom: 1px solid #FFFFFF;
+     font-size: 20px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+
+
+
+  
+
