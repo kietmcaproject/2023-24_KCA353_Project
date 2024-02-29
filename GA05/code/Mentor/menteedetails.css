@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+
+header {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.college-logo {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+}
+
+.mentoru-logo {
+    max-width: 15%;
+    height: auto;
+    margin-right: auto;
+    animation: rotate 5s linear infinite;
+    transform-origin: center center;
+}
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+hr {
+    margin-top: 0;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+h2,
+h5 {
+    text-align: center;
+    color: #007bff;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    text-align: center;
+}
+
+.btn-primary,
+.btn-info {
+    width: 100%;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.mt-5 {
+    margin-top: 5rem;
+}

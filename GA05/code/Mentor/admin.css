@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: paleturquoise;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logoc {
+    max-width: 100px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #b31414;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+.sign{
+    text-align: right;
+}
+
+/* Add New Student and Add New Teacher button styles */
+.add-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+.logo1 {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    
+    
+}
+.logo2 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    
+    
+}

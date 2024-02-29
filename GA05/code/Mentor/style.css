@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    padding: 2rem;
+
+    background-color: rgb(255, 255, 255);
+    align-items: flex-start;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 150px;
+    background-color: #e2e2e2;
+}
+
+nav>.leftNav>img {
+    width: 100px;
+    margin: 0rem 3rem;
+}
+
+nav>.rightNav>h1 {
+    font-size: 2vw;
+}
+
+.left {
+    box-shadow: 5px 5px 5px rgb(197, 194, 194);
+    width: 30%;
+    height: 100%;
+    border: 2px solid #333333;
+    flex-direction: column;
+    margin-left: .5rem;
+    padding: 1rem 0rem;
+}
+
+.img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.details {
+    margin: 1rem 0rem;
+    text-align: left;
+    width: 50%;
+    /* background-color: red;        */
+}
+
+.details>p {
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.right {
+    width: 70%;
+    box-shadow: 5px 5px 5px rgb(197, 194, 194);
+    height: 100%;
+    border: 2px solid #333333;
+    flex-direction: column;
+    margin-left: .5rem;
+}
+
+.info {
+    width: 85%;
+    border-radius: 5px;
+    height: 100%;
+    background-color: rgb(209, 142, 142);
+    justify-content: flex-start;
+    padding: 1rem;
+}
+
+.photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: azure;
+    margin-right: 1rem;
+}
+
+
+.tftable {
+    font-size: 12px;
+    color: #333333;
+    width: 100%;
+    border-width: 1px;
+    border-color: #868989;
+    border-collapse: collapse;
+}
+
+.tftable th {
+    font-size: 20px;
+    background-color: rgb(48, 48, 239);
+    border-width: 1px;
+    padding: 8px;
+    text-align: left;
+    color: white;
+}
+
+.tftable tr {
+    background-color: #dddddd;
+}
+
+.tftable td {
+    font-size: 18px;
+    border-width: 1px;
+    padding: 8px;
+    color: black;
+}
+
+.tftable tr:hover {
+    background-color: #ffffff;
+}
+
+.bottomLeft {
+    width: 100%;
+    height: 100%;
+    margin: 1rem;
+    padding: 1rem;
+
+}
+
+.cardsWrapper {
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0rem;
+}
+
+.cardsWrapper h1 {
+    padding: 1rem 0rem;
+}
+
+.cardsWrapper .chart {
+    width: 50%;
+    margin: 1rem 0rem;
+}
+
+.cardsContainer {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cards {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+    background-color: #c5c7c7;
+    width: 30%;
+}
+
+.card>h1 {
+    font-size: 2vw;
+}
+
+.card>p {
+    font-size: 1vw;
+}
+
+.counselling {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+}
+.counselling h1{
+    margin: 2rem 0rem;
+}
+.counsellingContainer {
+    width: 100%;
+    height: 100%;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+.type{
+    width: 500px;
+    margin: 1rem 0rem;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+}
+select {
+    width: 300px;
+    padding: .5rem;
+    color: #333333;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+
+}
+.btn{
+    width: 100%;
+
+}
+label{
+    font-size: 1.2rem;
+}
+
+select option {
+    color: #333333;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.select-selected {
+    background-color: DodgerBlue;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+input,textarea{
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 0rem 1rem;
+    width: 300px;
+    height: 80px;
+}
+button{
+    font-size: 1.3rem;
+    border: none;
+    background-color: transparent;
+    background-color: #333333;
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+@media screen and (max-width:1300px) {
+    .details {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .details p {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .details {
+        width: 70%;
+    }
+
+    .cardsContainer .chart {
+        width: 100%;
+    }
+
+    nav .rightNav h1 {
+        font-size: 3vw;
+    }
+
+    .cards .card h1 {
+        font-size: 3vw;
+
+    }
+
+    .cards .card p {
+        font-size: 2vw;
+
+    }
+
+    .tftable tr th {
+        font-size: 3vw;
+    }
+
+    .tftable tr td {
+        font-size: 2.5vw;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .counselling h1{
+        font-size: 1.5rem;
+    }
+    select{
+        font-size: .8rem;
+        padding: .5rem;
+        width: 250px;
+    }
+    .type{
+        flex-direction: column;
+        margin: .8rem 0rem;
+    }
+    input,textarea{
+        padding: .5rem;
+        font-size: .8rem;
+        width: 250px;
+        height: 50px;
+
+    }
+    button{
+        font-size: .8rem;
+
+    }
+    label{
+        font-size: .8rem;
+        margin: .7rem 0rem;
+    }
+    nav .rightNav h1 {
+        font-size: 4vw;
+    }
+
+    nav .leftNav img {
+        width: 100px;
+        margin-right: 1rem;
+    }
+
+    .main {
+        padding: 1rem;
+    }
+
+    .left {
+        margin-bottom: 1rem;
+        margin-left: 0rem;
+    }
+
+    .left img {
+        width: 150px;
+    }
+
+    .right {
+        margin-left: 0rem;
+
+    }
+
+    .cards .card h1 {
+        font-size: 6vw;
+
+    }
+
+    .cards .card p {
+        font-size: 3vw;
+
+    }
+
+    .tftable tr th {
+        font-size: 3.5vw;
+    }
+
+    .tftable tr td {
+        font-size: 3vw;
+    }
+
+}
+.connect-button {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+  }
+
+  /* Add some styling for the icon (you can use an actual icon library or an image) */
+  .connect-button i {
+    margin-right: 5px;
+  }
+
+  /* Add hover effect for the connect button */
+  .connect-button:hover {
+    background-color: #2980b9;
+  }
+
+  /* Style for the container of the additional buttons */
+  .additional-buttons {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  /* Style for the additional buttons */
+  .additional-buttons button {
+    margin: 5px;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+  }
+
+  /* Add hover effect for the additional buttons */
+  .additional-buttons button:hover {
+    background-color: #2ecc71;
+    color: #fff;
+  }
