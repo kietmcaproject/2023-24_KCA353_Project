@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaymentGateway</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <script src="firebase.js"></script> -->
+</head>
+<body>
+            <!-- <h2 id="head1">Blessings</h2>
+            <div id="details">
+
+                <h1 id="head2">Blessings On your way</h1>
+                <p id="para">
+                    Welcome to Blessings, where 
+                    compassion meets action! Our 
+                    donation website is a beacon of 
+                    hope, designed to make a positive 
+                    impact on the lives of those in need. 
+
+                </p>
+
+                <pre>
+ Contact Us :
+                    
+ <i  class="material-icons">&#xe0be;</i>    Email  Blessingsonyourway@gmail.com
+
+ <i style="font-size:24px" class="fa">&#xf095;</i>    Phone  9711395259
+                
+                </p>
+            </div> -->
+
+
+
+            <div class="split left">
+                <div id="centered">
+
+                  <img src="D:\Blessings\Blessing\images\blessings_logo-.png"width="350" height="340">
+                   <h2 id="">Blessings</h2>
+                    <div id="details">
+        
+                        <h1 id="">Blessings On your way</h1>
+                        <p id="para">
+                            Welcome to Blessings, where 
+                            compassion meets action! Our 
+                            donation website is a beacon of 
+                            hope, designed to make a positive 
+                            impact on the lives of those in need. 
+        
+                        </p>
+        
+                        <pre>
+         Contact Us :
+                            
+         <i  class="material-icons">&#xe0be;</i>    Email  Blessingsonyourway@gmail.com
+        
+         <i style="font-size:24px" class="fa">&#xf095;</i>    Phone  9711395259
+                        
+                        </p>
+                </div>
+              </div>
+              
+              <div class="split right">
+                <div id="centered2">
+                  <!-- <img src="img_avatar.png" alt="Avatar man"> -->
+                  <h2 id="head2">Payment Details</h2>
+                  <div id="Nm">
+                    <label for="Name" id="l0"> Name </label>
+                    <input &#x20B9; type="text" id="Name" placeholder="Enter name">
+                   </div>
+                   
+                  <div id="am">
+                  <label for="Amt" id="l1"> Donation Amount</label>
+                  <input &#x20B9; type="number" id="Amt" placeholder="Enter amount">
+                 </div>
+                  
+                  <div id="Em">
+                  <label for="Email" id="l2">Email</label>
+                  <input &#x20B9; type="Email" id="Email" height="20" width="50" placeholder="Enter email">
+                 
+                 </div> 
+                 <div id="ph">
+                  <label for="phone" id="l3">Phone</label>
+                  <input &#x20B9; type="text" id="phone" placeholder="Enter phone number">
+                 
+                 </div>
+                 
+                  <button class="btn" id="payButton" type="submit" onclick="submitForm();" >Pay ₹</button>
+
+
+                </div>
+              </div>
+
+              
+                
+  
+  <script type="module">
+   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+   import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js";
+   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAg3druEb0E3Q_hUV5343tBuErKdh8lY94",
+    authDomain: "blessings-7ca1c.firebaseapp.com",
+    projectId: "blessings-7ca1c",
+    storageBucket: "blessings-7ca1c.appspot.com",
+    messagingSenderId: "634684550847",
+    appId: "1:634684550847:web:df57bd2af5c7d61e3f600a",
+    measurementId: "G-87Q0PQMWRX"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  //get ref to Database services
+  const db=getDatabase(app);
+   document.getElementById("payButton").addEventListener('click',function(e){
+    e.preventDefault();
+    set(ref(db,'user/'+document.getElementById("Name").value),{
+        Name:document.getElementById("Name").value,
+        Amount:document.getElementById("Amt").value,
+        Email:document.getElementById("Email").value,
+        PhoneNumber:document.getElementById("phone").value
+
+    });
+    alert("Blessing on it's way  !");
+    
+    
+   })
+
+
+  var amountInput = document.getElementById('Amt');
+    var payButton = document.getElementById('payButton');
+
+    // Add an event listener to the amount input
+    amountInput.addEventListener('input', function() {
+      // Update the pay button text with the amount from the input
+      payButton.innerText = 'Pay ₹' + amountInput.value+'.00';
+     
+    });
+    
+    
+    function submitForm() {
+      // Get values from textboxes
+      var NameValue = document.getElementById("Name").value;
+      var amountValue = document.getElementById("Amt").value;
+      var emailValue = document.getElementById("Email").value;
+      var phoneValue = document.getElementById("phone").value;
+
+      // Validate if values are not empty
+      if (NameValue ==="" || amountValue === "" || emailValue === "" || phoneValue === "" ) {
+        alert("Please fill in all fields.");
+        return;
+      }
+      
+      // Submit the form (you can replace this with your actual form submission logic)
+      alert("Form submitted!\nName:" + NameValue + "\nAmt:"+ amountValue +"\nEmail: " + emailValue + "\nphone: " + phoneValue);
+      
+     
+    }
+
+
+
+
+
+
+  
+              </script>
+</body>
+</html>

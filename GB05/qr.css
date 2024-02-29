@@ -1,0 +1,8 @@
+body{
+    background:linear-gradient(to right ,#00AAFF , #00FF6C);
+}
+img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
