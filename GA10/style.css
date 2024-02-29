@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --main-color: #5D42BF;
+    --text-color: #292538;
+    --para-color: #495057;
+    --bg: #e7eaf2;
+    --card-bg: #fff;
+    --white: #fff;
+    --btn-color: linear-gradient(78.29deg, #3C3BA4 4.11%, #5854D8 117.86%);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(./assest/bg3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--bg);
+    /* padding-bottom: 50px; */
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 990px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
+/* Utility Classes */
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 1.8rem;
+    color: var(--para-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    background: var(--text-color) !important;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.fl-col {
+    flex-direction: column;
+}
+
+::placeholder {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.primary-btn {
+    width: 100%;
+    height: 45px;
+    color: var(--white);
+    background-color: var(--main-color);
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0px 0px 18px -5px var(--main-color);
+    transition: 0.7s ease;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.primary-btn:hover {
+    background-color: #5854D8;
+}
+
+.input-feild {
+    width: 100%;
+    outline: 0;
+    color: var(--para-color);
+    border: 2px solid var(--para-color);
+    background-color: var(--card-bg);
+    padding: 13px;
+    border-radius: 8px;
+}
+
+.input-feild:focus {
+    border-color: #5854D8;
+}
+
+.text-ellises {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: none;
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+}
+
+nav {
+    padding: 20px;
+    width: 100%;
+    background-color: var(--bg);
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.103);
+}
+
+.nav-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.main-title {
+    width: 100%;
+    padding-block: 30px;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+
+.reset-btn  {
+    width: 100px;
+    height: 40px;
+    font-size: 1.4rem;
+    border: 2px solid var(--para-color);
+    border-radius: 25px;
+    background-color: var(--white);
+    justify-content: center;
+    cursor: pointer;
+}
+
+.main-title .dashborad-title h1 {
+    font-size: 3.3rem;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.main-title .dashborad-title p {
+    font-size: 1.7rem;
+}
+
+.dashboard {
+    width: 100%;
+}
+
+.budgetSection {
+    width: 100%;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.dashboard .total-balnace {
+    width: 60%;
+    height: 200px;
+    padding-inline: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--white) !important;
+    border-radius: 20px;
+    background-image: url(./assest/Slice\ 1.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 25px #3d3ba486;
+}
+
+.total-balnace .balance-title p {
+    font-size: 2.2rem;
+    color: var(--white) !important;
+}
+
+.total-balnace .balance-amount {
+    width: 100%;
+}
+
+.total-balnace .balance-amount h1 {
+    font-size: 4.6rem;
+}
+
+/* addBudget */
+
+.addBudget,
+.addExpense {
+    width: 35%;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.14);
+}
+
+.addBudget .budget-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.addBudget form {
+    width: 100%;
+    gap: 18px;
+}
+
+/* expenseSection */
+
+.expenseSection {
+    margin-top: 40px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.expense-list-card {
+    width: 60%;
+    align-self: flex-start;
+    gap: 10px;
+}
+
+.income-expense-cards {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.incomeCard,
+.expenseCard {
+    width: calc(50% - 10px);
+    height: 150px;
+    padding: 25px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px rgba(234, 255, 239, 0.486);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.incomeCard {
+    background: rgba(120, 255, 154, 0.23);
+    backdrop-filter: blur(75px);
+}
+
+.incomeCard:hover {
+    background-color: #78ff9abb;
+}
+
+.expenseCard {
+    background: rgba(242, 27, 63, 0.23);
+    backdrop-filter: blur(75px);
+}
+
+.expenseCard:hover {
+    background-color: #f21b3f75;
+}
+
+.income-expense-cards>div>h2 {
+    font-size: 1.7rem;
+    color: var(--para-color);
+}
+
+.income-expense-cards>div>h1 {
+    font-size: 3.5rem;
+    color: var(--text-color);
+}
+
+/* addExpense */
+
+.addExpense {
+    align-self: flex-start;
+}
+
+.addExpense .expense-title {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.addExpense form {
+    width: 100%;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.addExpense>form>div {
+    width: 100%;
+}
+
+.addExpense form div label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--para-color);
+}
+
+.addExpense form div input {
+    margin-top: 7px;
+}
+
+.addExpense form button {
+    margin-top: 20px;
+}
+
+/* expenseList  */
+
+.expenseList {
+    width: 100%;
+    /* border-top: 1px solid var(--text-color); */
+}
+
+.listITems {
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.listITems .item {
+    width: 100%;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.14);
+    justify-content: space-between;
+}
+
+.listITems .item .list-expense-title-desc {
+    width: 75%;
+    justify-content: space-between;
+    gap: 3px;
+
+}
+
+.listITems .item .list-expense-title-desc .list-expense-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.list-expense-title-desc .list-expense-desc {
+    font-size: 1.4rem;
+    color: var(--para-color);
+}
+
+.list-expense-amount {
+    width: 20%;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    /* border-left: 1px solid var(--text-color); */
+}
+
+.list-expense-amount span{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.list-expense-amount .date {
+    font-size: 1.3rem;
+    color: var(--para-color);
+}
+
+.list-text {
+    align-items: flex-start;
+}
+
+#delete, #edit {
+    width: 8%;
+    padding: 10px;
+    font-size: 1.4rem;
+    color: var(--white);
+    background-color: #e63946;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#edit {
+    background-color: #3C3BA4;
+    font-size: 1.3rem;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.footer-text {
+    font-size: 1.4rem;
+    color: var(--para-color);
+}
+
+.footer-social-icons {
+    gap: 20px;
+}
+
+.footer-social-icons a ion-icon {
+    font-size: 2.2rem;
+    color: var(--para-color);
+}

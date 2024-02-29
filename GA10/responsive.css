@@ -1,0 +1,88 @@
+@media (max-width: 980px) {
+    .container {
+        max-width: 880px;
+    }
+}
+
+@media (max-width: 780px) {
+
+    html {
+        font-size: 57%;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .budgetSection {
+        flex-direction: column;
+    }
+
+    .dashboard .total-balnace,
+    .addBudget {
+        width: 100%;
+    }
+
+    .expenseSection {
+        flex-direction: column;
+    }
+
+    .expense-list-card {
+        width: 100%;
+    }
+
+    .addExpense {
+        width: 100%;
+    }
+
+    .income-expense-cards {
+        width: 100%;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .incomeCard,
+    .expenseCard{
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    html {
+        font-size: 50%;
+    }
+
+    ::placeholder {
+        font-size: 1.7rem;
+    }
+
+    h2{
+        font-size: 1.4rem !important;
+    }
+
+    .listITems .item .list-expense-title-desc {
+        width: 70%;
+    }
+
+    .incomeCard h2 {
+        font-size: 2rem !important;
+    }
+    .expenseCard h2{
+        font-size: 2rem !important;
+    }
+
+    #delete, #edit {
+        width: 11%;
+        padding: 0px;
+        height: 30px;
+    }
+
+    .main-title h2 {
+        font-size: 2.1rem !important;
+    }
+
+    #reset {
+        width: 70px;
+        border-radius: 15px;
+    }
+}
