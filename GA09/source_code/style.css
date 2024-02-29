@@ -1,0 +1,21 @@
+/* Adjust the image size and margin */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem; /* Adjust the margin as needed */
+}
+
+/* Center the image vertically */
+.col-12.col-sm-4.col-md-7 {
+    display: flex;
+    align-items: center;
+}
+
+body{
+    background-color: #111111;
+}
+
+.form-group .required .control-label:after {
+    content:"*";
+    color:red;
+  }
