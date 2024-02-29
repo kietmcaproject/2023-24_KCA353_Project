@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'CS-Interface';
+  src:
+    url('fonts/CS-Interfacec9f0.ttf?2eqyst') format('truetype'),
+    url('fonts/CS-Interfacec9f0.woff?2eqyst') format('woff'),
+    url('fonts/CS-Interfacec9f0.svg?2eqyst#CS-Interface') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="cs-"], [class*=" cs-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'CS-Interface' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cs-circle:before {
+  content: "\e922";
+}
+.cs-scissors:before {
+  content: "\e902";
+}
+.cs-question-hexagon:before {
+  content: "\e900";
+}
+.cs-save:before {
+  content: "\e901";
+}
+.cs-search:before {
+  content: "\e906";
+}
+.cs-send:before {
+  content: "\e907";
+}
+.cs-settings-2:before {
+  content: "\e908";
+}
+.cs-sort:before {
+  content: "\e909";
+}
+.cs-star:before {
+  content: "\e90a";
+}
+.cs-star-full:before {
+  content: "\e90b";
+}
+.cs-user:before {
+  content: "\e90c";
+}
+.cs-warning-hexagon:before {
+  content: "\e90d";
+}
+.cs-archive:before {
+  content: "\e90e";
+}
+.cs-arrow-double-left:before {
+  content: "\e90f";
+}
+.cs-arrow-double-right:before {
+  content: "\e910";
+}
+.cs-bin:before {
+  content: "\e911";
+}
+.cs-calendar:before {
+  content: "\e912";
+}
+.cs-check:before {
+  content: "\e913";
+}
+.cs-check-square:before {
+  content: "\e914";
+}
+.cs-chevron-bottom:before {
+  content: "\e915";
+}
+.cs-chevron-left:before {
+  content: "\e916";
+}
+.cs-chevron-right:before {
+  content: "\e917";
+}
+.cs-chevron-top:before {
+  content: "\e918";
+}
+.cs-clipboard:before {
+  content: "\e919";
+}
+.cs-clock:before {
+  content: "\e91a";
+}
+.cs-close:before {
+  content: "\e91b";
+}
+.cs-close-circle:before {
+  content: "\e91c";
+}
+.cs-duplicate:before {
+  content: "\e91d";
+}
+.cs-edit-square:before {
+  content: "\e91e";
+}
+.cs-error-hexagon:before {
+  content: "\e91f";
+}
+.cs-file-text:before {
+  content: "\e920";
+}
+.cs-gear:before {
+  content: "\e921";
+}
+.cs-info-hexagon:before {
+  content: "\e903";
+}
+.cs-menu:before {
+  content: "\e904";
+}
+.cs-more-horizontal:before {
+  content: "\e905";
+}
