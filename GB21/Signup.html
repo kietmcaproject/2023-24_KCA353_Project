@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+                         initial-scale=1.0"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h3 class="title">Login & Registration Form</h3>
+    </header>
+
+    <!-- container div -->
+    <div class="container">
+      <!-- upper button section to select
+             the login or signup form -->
+      <div class="slider"></div>
+      <div class="btn">
+        <button class="login">Login</button>
+        <button class="signup">Signup</button>
+      </div>
+
+      <!-- Form section that contains the
+             login and the signup form -->
+      <div class="form-section">
+        <!-- login form -->
+        <form action="http://localhost/mouse/Login.php" method="post">
+          <div class="login-box">
+            <input
+              type="email"
+              class="email ele"
+              placeholder="youremail@email.com"
+              name="email"
+            />
+            <input
+              type="password"
+              class="password ele"
+              placeholder="password"
+              name="password"
+            />
+            <button class="clkbtn" name="login">Login</button>
+          </div>
+        </form>
+
+        <!-- signup form -->
+        <form action="http://localhost/mouse/Signup1.php" method="post">
+          <div class="signup-box">
+            <input
+              type="text"
+              class="name ele"
+              placeholder="Enter your name"
+              name="name"
+            />
+
+            <input
+              type="email"
+              class="email ele"
+              placeholder="youremail@email.com"
+              name="email"
+            />
+
+            <input
+              type="password"
+              class="password ele"
+              placeholder="password"
+              name="password"
+            />
+
+            <input
+              type="password"
+              class="password ele"
+              placeholder="Confirm password"
+              name="confirm"
+            />
+
+            <button class="clkbtn" name="signup">Signup</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index1.js"></script>
+  </body>
+</html>

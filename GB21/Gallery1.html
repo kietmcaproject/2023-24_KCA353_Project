@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Gallery</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: indianred;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 20px;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Restaurant Gallery</h1>
+    </header>
+
+    <div class="gallery">
+      <img src="./images/img1.jpg" alt="Food 1" />
+      <img src="./images/img6.jpg" alt="Food 2" />
+      <img src="./images/img5.jpg" alt="Food 3" />
+      <img src="./images/img2.jpg" alt="Food 4" />
+      <img src="./images/img11.jpg" alt="Food 5" />
+      <img src="./images/img8.jpg" alt="Food 6" />
+      <img src="./images/img3.jpg" alt="Food 7" />
+      <img src="./images/img 4.jpg" alt="Food 8" />
+      <img src="./images/img 7.jpg" alt="Food 9" />
+    </div>
+  </body>
+</html>
